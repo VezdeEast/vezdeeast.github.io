@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Dota 2"
 date:   2015-10-06 15:39:40
-preview: holder.js/300x300?auto=yes
+preview: C:\Users\ballo\OneDrive\Documents\GitHub\vezdeeast.github.io\images
 ---
 
 ![Picture 1](holder.js/800x600?auto=yes)
