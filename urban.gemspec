@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email         = [""]
 
   spec.summary       = %q{A Jekyll port of http://erosie.net/ with some modifications. It is designed for visual artists.}
-  spec.homepage      = "https://github.com/midzer/urban-theme"
+  spec.homepage      = "https://vezdeeast.github.io"
   spec.license       = "MIT"
 
   spec.metadata["plugin_type"] = "theme"
