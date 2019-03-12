@@ -2,7 +2,7 @@
 layout: post
 title:  "Dota 2"
 date:   2015-10-06 15:39:40
-preview: C:\Users\ballo\OneDrive\Documents\GitHub\vezdeeast.github.io\images
+preview: /images/doka.jpg
 ---
 
 ![Picture 1](holder.js/800x600?auto=yes)
