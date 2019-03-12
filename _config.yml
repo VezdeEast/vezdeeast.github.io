@@ -1,4 +1,4 @@
-# Dependencies
+site.url# Dependencies
 markdown:	kramdown
 # Permalinks
 permalink:	/blog/:title
@@ -7,7 +7,7 @@ permalink:	/blog/:title
 title:            Thinny
 tagline:          'blog'
 description:      'My personal blog.'
-url:              http://camporez.github.io
+url:              http://#
 baseurl:          
 commentsystem:    google
 disqus:           example
