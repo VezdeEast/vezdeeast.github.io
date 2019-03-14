@@ -2,7 +2,7 @@
 layout: post
 title:  "Основы блефа"
 date:   2019-02-18 20:39:40
-preview: /imag/tt.png
+preview: /imag/bleff.jpg
 ---
 
 ![Picture](/imag/blef.jpg)
