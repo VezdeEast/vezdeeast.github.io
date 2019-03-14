@@ -5,7 +5,7 @@ date:   2019-02-10 15:39:40
 preview: /imag/full.jpg
 ---
 
-![Picture 1](holder.js/800x600?auto=yes)
+![Picture 1](/imag/21 .jpg)
 
 ## КАК ОТНОСИТЬСЯ К ПРОИГРЫШАМ В АЗАРТНЫХ ИГРАХ
 
