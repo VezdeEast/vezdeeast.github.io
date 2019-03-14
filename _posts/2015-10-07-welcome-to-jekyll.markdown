@@ -2,7 +2,7 @@
 layout: post
 title:  ""
 date:   2019-02-03 15:39:40
-preview: holder.js/300x300?auto=yes
+preview: /imag/internet.jpg
 ---
 
 ![Picture 1](holder.js/800x600?auto=yes)
