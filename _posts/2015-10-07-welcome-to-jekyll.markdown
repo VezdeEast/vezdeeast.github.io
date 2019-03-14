@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  ""
+title:  "Основы введение игры в интеренет казино"
 date:   2019-02-03 15:39:40
 preview: /imag/internet.jpg
 ---
