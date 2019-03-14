@@ -2,10 +2,10 @@
 layout: post
 title:  "Что делать если закрылось онлайн-казино, где вы играли"
 date:   2019-02-09 15:39:40
-preview: holder.js/300x300?auto=yes
+preview: /imag/blokjpg.jpg
 ---
 
-![Picture 1](holder.js/800x600?auto=yes)
+![Picture 1](/imag/казиныч.jpg)
 
 ## ЧТО ДЕЛАТЬ, ЕСЛИ ЗАКРЫЛОСЬ ОНЛАЙН-КАЗИНО, ГДЕ ВЫ ИГРАЛИ
 
