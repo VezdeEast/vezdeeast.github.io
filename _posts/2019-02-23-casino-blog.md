@@ -2,10 +2,10 @@
 layout: post
 title:  " Преимущества игровых слотов"
 date:   2019-02-23 15:39:40
-preview: /imag/777.jpg
+preview: /imag/how.jpg
 ---
 
-![Picture 1](/imag/chet.jpg)
+![Picture 1](/imag/2.jpg)
 
 ## КАК ВЫБРАТЬ КАЗИНО В ИНТЕРНЕТЕ
 
