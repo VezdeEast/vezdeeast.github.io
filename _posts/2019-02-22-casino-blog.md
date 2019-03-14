@@ -2,10 +2,10 @@
 layout: post
 title:  " Преимущества игровых слотов"
 date:   2019-02-22 15:39:40
-preview: /imag/111.jpg
+preview: /imag/777.jpg
 ---
 
-![Picture 1](/imag/women.jpg)
+![Picture 1](/imag/chet.jpg)
 
 ## 7 ПРЕИМУЩЕСТВ  ИГРОВЫХ  СЛОТОВ
 
