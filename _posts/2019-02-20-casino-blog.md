@@ -5,7 +5,7 @@ date:   2019-02-09 15:39:40
 preview: /imag/bonus.jpg
 ---
 
-![Picture 1](/imag/bonus.jpg)
+![Picture 1](/imag/bonus1.jpg)
 
 ## БОНУСХАНТИНГ ИЛИ КАК ОТЫГРАТЬ БОНУСЫ
 
