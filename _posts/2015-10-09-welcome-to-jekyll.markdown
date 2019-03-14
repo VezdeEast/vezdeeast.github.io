@@ -5,7 +5,7 @@ date:   2015-10-09 15:39:40
 preview: /imag/pokerv.jpg
 ---
 
-![Picture 1](holder.js/800x600?auto=yes)
+![Picture 1](/imag/pokerr.jpg)
 
 ## КАК БЕЗ ВЛОЖЕНИЙ НАЧАТЬ ИГРАТЬ В ПОКЕР
 
