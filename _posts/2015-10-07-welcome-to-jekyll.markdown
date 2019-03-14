@@ -5,7 +5,7 @@ date:   2019-02-03 15:39:40
 preview: /imag/internet.jpg
 ---
 
-![Picture 1](holder.js/800x600?auto=yes)
+![Picture 1](/imag/internet.jpg)
 
 
 ## ПЯТЬ ОСНОВНЫХ ПРАВИЛ ИГРЫ В ИНТЕРЕНЕТ-КАЗИНО
