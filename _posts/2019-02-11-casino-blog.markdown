@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Начало: Без вложений"
-date:   2015-10-09 15:39:40
+date:   2019-03-01 15:39:40
 preview: /imag/pokerv.jpg
 ---
 
