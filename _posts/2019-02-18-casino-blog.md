@@ -5,7 +5,7 @@ date:   2019-02-18 20:39:40
 preview: /imag/tt.png
 ---
 
-![Picture](/imag/рулетка.jpg)
+![Picture](/imag/blef.jpg)
 
 <strong>ЧТО ТАКОЕ ОТЛОЖЕННЫЙ БЛЕФ, И КАК ИМ ПОЛЬЗОВАТЬСЯ</strong>
 
