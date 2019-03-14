@@ -2,7 +2,7 @@
 layout: post
 title:  "Правильная игра в рулетку с денежными ставками"
 date:   2019-01-20 20:39:40
-preview: /imag/ПОКЕр.png
+preview: /imag/рулетка.jpg
 ---
 
 ![Picture](/imag/33.jpg)
