@@ -2,10 +2,10 @@
 layout: post
 title:  "Секреты игры в рулетку"
 date:   2019-01-20 20:39:40
-preview: /imag/blokjpg.jpg
+preview: /imag/pokerv.jpg
 ---
 
-![Picture](/imag/казиныч.jpg)
+![Picture](/imag/рулетка.jpg)
 
 ## ПРАВИЛЬНАЯ ИГРА В РУЛЕТКУ С ДЕНЕЖНЫМИ СТАВКАМИ
 
