@@ -2,7 +2,7 @@
 layout: post
 title:  "Как обезопасить себя, играя в онлайн-казино"
 date:   2019-02-24 15:39:40
-preview: /imag/save1.jpg
+preview: /imag/sss.jpg
 ---
 
 ![Picture 1](/imag/save2.png)
