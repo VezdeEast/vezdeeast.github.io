@@ -1,7 +1,7 @@
 layout: post
 title: "Честные онлайн казино - миф или реальность"
-date:   2019-02-15 15:39:40
-preview: /imag/blokjpg.jpg
+date: 2019-02-15 15:39:40
+preview: /imag/честь.png
 ---
 
 ![Picture 1](/imag/казиныч.jpg)
