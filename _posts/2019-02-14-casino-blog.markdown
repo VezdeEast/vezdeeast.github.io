@@ -2,7 +2,7 @@
 layout: post
 title:  "Секреты игры в рулетку"
 date:   2019-01-20 20:39:40
-preview: /imag/blok.jpg
+preview: /imag/blokjpg.jpg
 ---
 
 ![Picture](/imag/казиныч.jpg)
