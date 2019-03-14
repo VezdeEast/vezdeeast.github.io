@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Как выбрать казино в интернете"
+title:  "Как обезопасить себя, играя в онлайн-казино"
 date:   2019-02-24 15:39:40
-preview: /imag/how.jpg
+preview: /imag/save1.jpg
 ---
 
-![Picture 1](/imag/2.jpg)
+![Picture 1](/imag/save2.png)
 
 ## КАК ОБЕЗОПАСИТЬ СЕБЯ, ИГРАЯ В ОНЛАЙН-КАЗИНО
 
