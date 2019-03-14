@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Секреты игры в рулетку"
+title:  "Основы блефа"
 date:   2019-02-18 20:39:40
 preview: /imag/tt.png
 ---
