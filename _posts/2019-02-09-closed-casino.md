@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  ""
+title:  "Что делать если закрылось онлайн-казино, где вы играли"
 date:   2019-02-09 15:39:40
 preview: holder.js/300x300?auto=yes
 ---
