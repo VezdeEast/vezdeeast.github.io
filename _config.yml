@@ -9,7 +9,7 @@
 title: WOW
 email: DOTA@valve.com
 description: ExpertCasino Blog
-baseurl: "/vezdeeast.github.io" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://vezdeeast.github.io" # the base hostname & protocol for your site
 twitter_username: VeZDe
 github_username:  vezdeeast
