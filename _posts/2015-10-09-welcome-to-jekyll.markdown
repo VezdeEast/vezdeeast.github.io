@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Начало:Без вложений"
+title:  "Начало: Без вложений"
 date:   2015-10-09 15:39:40
-preview: holder.js/300x300?auto=yes
+preview: /imag/pokerv.jpg
 ---
 
 ![Picture 1](holder.js/800x600?auto=yes)
