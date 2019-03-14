@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  ""
+title:  "Как относиться к проигрышам в азартных играх"
 date:   2019-02-10 15:39:40
 preview: /imag/full.jpg
 ---
