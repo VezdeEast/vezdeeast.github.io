@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Особености карточной рулетки"
-date:   2019-02-20 15:39:40
+date:   2019-02-21 15:39:40
 categories: pokrull
 ---
 
