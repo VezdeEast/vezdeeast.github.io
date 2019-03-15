@@ -5,7 +5,7 @@ date:   2019-02-21 15:39:40
 categories: folding
 ---
 
-{% include image.html url="/imag/pokrull.jpg" width="100%" description="" %}
+{% include image.html url="/imag/strategy.png" width="100%" description="" %}
 
 ## СТРАТЕГИЯ ФОЛДИНГА В ПОКЕРЕ
 
