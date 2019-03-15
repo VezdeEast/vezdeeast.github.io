@@ -5,7 +5,7 @@ date:   2019-02-14 15:39:40
 categories: luck
 ---
 
-{% include image.html url="/imag/7card.png" width="100%" description="" %}
+{% include image.html url="/imag/zodiak.jpg" width="100%" description="" %}
 
 ## КАКИМ ЗНАКАМ ЗОДИАКА ВЕЗЕТ В АЗАРТНЫХ ИГРАХ
 
