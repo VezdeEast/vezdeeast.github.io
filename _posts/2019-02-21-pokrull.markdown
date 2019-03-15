@@ -5,7 +5,7 @@ date:   2019-02-21 15:39:40
 categories: pokrull
 ---
 
-{% include image.html url="/imag/russian.jpg" width="100%" description="" %}
+{% include image.html url="/imag/pokrull.jpg" width="100%" description="" %}
 
 
 ## ОСОБЕННОСТИ КАРТОЧНОЙ РУЛЕТКИ
