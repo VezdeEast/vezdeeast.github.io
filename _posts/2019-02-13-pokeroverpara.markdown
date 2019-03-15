@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "СТРАТЕГИЯ ПОКЕРА: ОВЕРПАРА"
+title:  "Стратегия покера: Оверпара"
 date:   2019-02-13 15:39:40
 categories: Poker type
 ---
