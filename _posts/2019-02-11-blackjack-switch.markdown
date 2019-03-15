@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Блэк-джек свитч"
-date:   2019-02-10 15:39:40
+date:   2019-02-11 15:39:40
 categories: BlackJack
 ---
 
