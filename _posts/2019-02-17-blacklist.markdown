@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Стратегии побед на слотах"
-date:   2019-02-16 15:39:40
-categories: slots
+title:  "Зачем нужен Blacklist в казино"
+date:   2019-02-17 15:39:40
+categories: blacklist
 ---
 
 {% include image.html url="/imag/ыдще.jpg" width="100%" description="" %}
