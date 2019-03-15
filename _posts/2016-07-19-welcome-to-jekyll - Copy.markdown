@@ -1,6 +1,8 @@
 ---
 layout: post
-title:  "PAPICH"
-date:   2016-07-19 11:49:45 +0200
+title:  "ЧТО ТАКОЕ ЭМУЛЯТОР ИГРОВОГО АВТОМАТА"
+date:   2019-02-26 15:39:40
 categories: ROFLAN
 ---
+
+![Picture 1](/imag/poker.jpg)
