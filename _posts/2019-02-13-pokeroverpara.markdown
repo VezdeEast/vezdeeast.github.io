@@ -5,7 +5,7 @@ date:   2019-02-13 15:39:40
 categories: Poker type
 ---
 
-{% include image.html url="/imag/7card.png" width="100%" description="" %}
+{% include image.html url="/imag/overpara.png" width="100%" description="" %}
 
 ## СТРАТЕГИЯ ПОКЕРА: ОВЕРПАРА – КАК ПРАВИЛЬНО ЕЕ РАЗЫГРАТЬ
 
