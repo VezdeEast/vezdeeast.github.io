@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Стратегия фолдинга в покере"
-date:   2019-02-21 15:39:40
+date:   2019-02-22 15:39:40
 categories: folding
 ---
 
