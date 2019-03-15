@@ -5,7 +5,7 @@ date:   2019-02-15 15:39:40
 categories: donkbet
 ---
 
-{% include image.html url="/imag/zodiak.jpg" width="100%" description="" %}
+{% include image.html url="/imag/donk-bet.jpg" width="100%" description="" %}
 
 ## СТРАТЕГИЯ ПОКЕРА: ДОНК-БЕТ
 
