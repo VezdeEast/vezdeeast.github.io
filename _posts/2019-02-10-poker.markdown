@@ -5,7 +5,7 @@ date:   2019-02-10 15:39:40
 categories: Poker type
 ---
 
-{% include image.html url="/imag/poker.jpg" width="100%" description="" %}
+{% include image.html url="/imag/7card.png" width="100%" description="" %}
 
 ## СЕМИКАРТОЧНЫЙ СТАД: КАК ИГРАТЬ В ЭТОТ ВИД ПОКЕРА
 
