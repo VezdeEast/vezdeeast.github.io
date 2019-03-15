@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "CЕМИКАРТОЧНЫЙ СТАД"
+title:  "Семикарточный стад"
 date:   2019-02-10 15:39:40
-categories: ROFLAN
+categories: Poker type
 ---
 
 {% include image.html url="/imag/poker.jpg" width="100%" description="" %}
