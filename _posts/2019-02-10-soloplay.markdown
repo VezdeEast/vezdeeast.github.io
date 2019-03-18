@@ -3,7 +3,7 @@ layout: post
 title: Стратегия в покере 
 categories: poker
 ---
-<img src="/images/fulls/02.jpg" class="fit image">
+<img src="/images/fulls/1na1.jpg" class="fit image">
 
 ## СТРАТЕГИЯ В ПОКЕРЕ: ИГРА 1 НА 1
 
