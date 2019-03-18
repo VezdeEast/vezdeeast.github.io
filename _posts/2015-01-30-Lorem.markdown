@@ -2,14 +2,29 @@
 layout: post
 ---
 <img src="/images/fulls/02.jpg" class="fit image">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus fringilla dui. Donec laoreet maximus elit. Mauris ullamcorper condimentum lobortis. Donec maximus, mi vitae iaculis placerat, ligula mi maximus lectus, ac varius mi nulla id neque. Quisque porta eros nisi, eu fringilla urna dictum vitae. 
 
-Vestibulum id metus eu nisl sodales consectetur. Phasellus et ultrices lacus.
+## СТРАТЕГИЯ В ПОКЕРЕ: ИГРА 1 НА 1
 
-Curabitur orci turpis, egestas placerat velit eget, dictum pellentesque ipsum. Suspendisse potenti. Suspendisse ac maximus arcu. Sed ut mattis ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eleifend odio vitae varius aliquam. Quisque ac pretium nisi. Curabitur tempus urna ac ultrices commodo.
+<br> Покер – удивительная игра с набором своих уникальных стратегий. Что интересно, методики и тактики, используемые в покере, могут в одних случаях помогать, а в других вредить. Поэтому недостаточно просто изучить стратегию, еще нужно научиться определять ситуации, где выбранная методика будет актуальной, а где нет. В этой статье предлагаем рассмотреть варианты ведения игры за столом против одного соперника. 
 
-Curabitur iaculis est at mattis mattis. Aliquam erat volutpat. Etiam vitae cursus quam. Nunc ultricies nunc non lorem fringilla cursus. Etiam dapibus libero ac turpis accumsan pulvinar. Sed auctor velit eget mi consequat bibendum. Aliquam interdum purus eget metus pretium ullamcorper.
+<br><strong> Базовый агрессор</strong>
 
-Pellentesque feugiat ex non ligula commodo, eget varius tortor pellentesque. Pellentesque id tortor felis. Cras fringilla ante eget orci laoreet, non consequat urna suscipit. Pellentesque luctus ac nulla vitae porttitor. Proin sed tortor quis magna efficitur efficitur a id leo. Donec efficitur augue et laoreet maximus. Ut semper egestas porttitor. Phasellus sagittis vulputate sem at laoreet.
+<br>Это типаж игроков, которые играют очень осторожно. Они делают маленькие рейзы, сильно повышают только в том случае, если на руках есть действительно сильная комбинация. С одной стороны подобный вариант игры весьма эффективный. Тактика дает возможность воровать небольшие блайнды. Но недостаток стратегии в том что, выиграть по-крупному вряд ли получится.
 
-Sed lobortis urna ut mi volutpat, sit amet euismod sapien tincidunt. Nulla facilisi. Pellentesque quis tempus neque. Mauris dictum ac sapien nec congue. In hac habitasse platea dictumst. Duis id pellentesque nisl. Morbi eget massa magna.
+<br><strong>Лузово-агрессивный игрок</strong>
+
+<br>Как правило, делают большие ставки, и при этом не всегда оправданные. Если перед вами такой игрок, то тут только два варианта, это или неопытный новичок, или акула покера. Чтобы понять, кто перед вами с таким игроком желательно сыграть несколько раундов.
+
+<br><strong>Тайтово-агрессивный игрок</strong>
+
+<br>Это тип игроков, которые ведут себя агрессивно, но при этом разыгрывают исключительно сильные руки. Использовать этого игрока на свою пользу можно тем, что все маленькие руки он будет скидывать, и небольшие блайнды будут уходить к вам. При этом учтите, что игрок будет всеми силами стараться компенсировать потери за счет сильных рук. Оказавшись за столом с таким игроком, будьте осторожны и внимательны, продумывайте все свои ходы наперед.
+
+<br><strong>Тайтово-пассивный игрок</strong>
+
+<br>По типажу похож на предыдущего персонажа, но при этом этот типаж не всегда разыгрывает даже сильные руки. Действует он исключительно осторожно, в чем его и слабость. С одной стороны, это полезная тактика, с другой, такой игрок медленно, но уверенно сливает свой банкролл.
+
+<br><strong>Автоответчик</strong>
+
+<br>Когда подобный типаж оказывается за большим столом, то это говорит о том, что перед вами новичок. В том случае, когда вы оказываетесь с этим персонажем один на один, все меняется. В такой игре шансы на победу 50 на 50, поэтому не столь важно, какая у кого комбинация, выигрывает более сильная карта. Подобную стратегию за большим столом никогда не возьмет опытный игрок, но при этом в дуэли будьте готовы, что перед вами может оказаться акула покера. 
+
+<br>Большинство неопытных игроков всегда стремятся дойти до флопа и жадничают скидывать карты, возьмите это себе на заметку и пользуйтесь.  
