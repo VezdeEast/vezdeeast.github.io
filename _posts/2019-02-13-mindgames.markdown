@@ -5,7 +5,7 @@ date: 2019-02-13 T14:37:44.000Z
 categories: mindgames
 ---
 
-<img src="/images/fulls/TOURNAMENT.jpeg" class="fit image"> 
+<img src="/images/fulls/mindgames.jpg" class="fit image"> 
 
 ## МОЖНО ЛИ СИЛОЙ МЫСЛИ ПОВЛИЯТЬ НА ВЫИГРЫШ В СЛОТЕ
 
