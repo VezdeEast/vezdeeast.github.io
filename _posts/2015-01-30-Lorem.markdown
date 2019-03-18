@@ -1,5 +1,7 @@
 ---
 layout: post
+title: Стартегия в покере 
+categories: poker
 ---
 <img src="/images/fulls/02.jpg" class="fit image">
 
