@@ -5,7 +5,7 @@ date: 2019-02-11 T14:37:44.000Z
 categories: tournament
 ---
 
-<img src="/images/fulls/01.jpg" class="fit image"> 
+<img src="/images/fulls/TOURNAMENT.jpeg" class="fit image"> 
 
 ## РОЖДЕНИЕ ПОКЕРНОГО ЧЕМПИОНАТА – WORLD SERIES OF POKER (WSOP)
 
