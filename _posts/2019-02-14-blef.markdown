@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Рождение покерного чемпионата WSOP
+title: Стратегия покера : как вести игру против блефа
 date: 2019-02-11 T14:37:44.000Z
 categories: tournament
 ---
