@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Стратегия в покере 
+title: Стратегия в покере : игра 1 на 1
 categories: poker
 ---
 <img src="/images/fulls/1na1.jpg" class="fit image">
