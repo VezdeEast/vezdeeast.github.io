@@ -1,30 +1,49 @@
 ---
 layout: post
-title:  "Figure With A Caption"
-date:   2014-12-12
+title:  "Стили игры в покере"
+date:   2019-02-12
 ---
 
+{% include image.html url="/assets/img/style.jpg" width="100%" description="" %}
 
-<p class="intro"><span class="dropcap">L</span>orem ipsum thor smash liege-bastogne-liege landbouwkrediet ombregt krabbe, rouleur derby is for lovers bonk giro gilbert bidon. Driedaagse de panne-koksijde monte paschi eroica, nevele gimondi berendries off the back cassette tenbosse.</p>
+## КАКОЙ СТИЛЬ В ПОКЕРЕ ВЫБРАТЬ: ТАЙТОВЫЙ ИЛИ ЛУЗОВЫЙ
 
-Bahamontes lanterne rouge normandie belgium. Fred paris-nice arrivere, for omnium commissaire ronde van vlaanderen horizontally stiff but vertically compliant muur, valkenberg jens paris-roubaix. Meyrueis belleville cavendish bianchi, rochefort echelon in soigneur ten dam omloop het volk, bettini aerts! Tour de mont aigoual cat among the pigeons rekelberg omloop het nieuwsblad paris-nice, dwars door vlaanderen coppi the colnago knockteberg anduze.
+<br>Умение понимать игроков за покерным столом является ключевым для выигрыша. Существуют разные стратегии ведения игры, а также разные модели поведения. Профессионалы очень хорошо владеют подобными инструментами, они умеют «читать» своих оппонентов, благодаря чему получают огромное преимущество над новичками. В этой статье предлагаем ознакомиться с ведущими типами покерных игроков.
 
-<figure>
-	<img src="{{ '/assets/img/touring.jpg' | prepend: site.baseurl }}" alt=""> 
-	<figcaption>Fig1. - This is an example figcaption</figcaption>
-</figure>
+<br><strong>Два главных типа игроков в покер</strong>
 
-{% highlight html %}
-<figure>
-	<img src="{{ '/assets/img/touring.jpg' | prepend: site.baseurl }}" alt=""> 
-	<figcaption>Fig1. - This is an example figcaption</figcaption>
-</figure>
-{% endhighlight %}
+<br><i>Тайтовый игрок</i> – играет только, если на старте получает сильные руки. Все остальные комбинации сбрасывает. Никогда не рискует и не блефует. Как правило, разыгрывает не более 20% всех стартовых рук. Подобные игроки отличаются осторожностью, каждый их шаг строго продуманный.
 
-Kaperij lanterne rouge musette rund um koln bruges thor smash, geraardsbergen riis petacchi molteni pedaling squares. Virenque vande velde, valkenberg gutter pantani parcours gaul domestique, tilford campagnolo around madone. Bruyneel criterium ritte, gorgeous george the trousselier feed zone bruges nokere koerse, parcours gilbert garin? Anquetil valkenberg bettini cat among the pigeons.
+<br><i>Лузовый игрок</i> – разыгрывает практически все стартовые руки. Редко пользуется обдуманными стратегиями, идет напролом и в 35% просматривает карты на флопе.
 
-Campagnolo the hors delai de wolf as the toto turns venga venga venga, sanchez nys. Pantani hell of the north oude kwaremont nitto koppenberg, tiegemberg van steenbergen lombardie flamme rouge lemond e3 prijs vlaanderen.
+<br>Помимо двух этих «чистых» видов часто бывают еще дополнительные:
 
-Planckaert berg ter stene freire gorgeous george in rouleur derby, vaughters fabianese omloop het volk rouleur play rouleur derby. Bottechia petacchi, milan-san remo van summeren off the back cutters the cassette.
+<br>•	тайтово-агрессивные;
 
-Nyvelocity pyrenees vande velde merckx. La fleche wallonne fixie pau, with muur hors categorie boonen aerts operacion puerto, topsport vlaanderen pereiro randonneur. This greek text is produced by rouleur derby, almost certainly the best fantasy cycling game in the world snob trousselier col du galibier, flanders venga venga venga suitcase of courage cutters kolobnev molenberg.
+<br>•	лузовоагрессивные.
+
+<br>Агрессивная манера игры отличается тем, что такой игрок подтверждает практически все ставки, регулярно повышает и идет ва-банк.
+
+<br>Отличаются эти два типа игроков тем, что тайтовый четко понимает, что делает. Если он ведет агрессивную игру, то понимает зачем. В свою очередь, лузовоагрессивный персонаж редко осознает свои действия, больше полагается на удачу.
+
+<br>Но, несмотря на то, что на первый взгляд может показаться, что лузовый стиль игры присущ только глупцам и новичкам, это не так. Многие опытные игроки его также используют. И вот почему. Если за столом много людей и у вас выгодная позиция, то подобный стиль способен неплохо отрабатывать на коротких дистанциях. Т.е. вы будете выигрывать понемногу, но часто.
+
+<br><strong>Как играть против Лузовых игроков</strong>
+
+<br>Против таких игроков лучшая тактика – осторожность. Порой может показаться, что они играют, как «Маньяки» (еще один стиль игры).
+
+<br>Защитная стратегия выглядит так:
+
+<br>•	сохраняйте спокойствие и не видитесь на провокации;
+
+<br>•	не блефуйте, это не поможет;
+
+<br>•	если приходит сильная рука, сразу идите в атаку;
+
+<br>•	разыгрывайте минимальное количество рук;
+
+<br>•	берите только минимальный стек.
+
+<br>Это основные рекомендации, как можно эффективно выстроить защиту в игре против Лузовых игроков.
+
+<br>Защититься от Тайтовых игроков можно осознав, что они играют только с сильной картой. С ними можно разыгрывать блеф. Но будьте внимательны, обыграть такого игрока вряд ли получится. Как правило, эту технику выбирают только профессионалы. 
