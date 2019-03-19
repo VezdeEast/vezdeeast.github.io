@@ -4,7 +4,7 @@ title:  "Шестикарточный покер"
 date:   2019-02-18
 ---
 
-{% include image.html url="/assets/img/six.jpg" width="100%" description="" %}\
+{% include image.html url="/assets/img/six.jpg" width="100%" description="" %}
 
 ## ШЕСТИКАРТОЧНЫЙ ПОКЕР: КАК ИГРАТЬ
 
