@@ -1,19 +1,24 @@
----
-layout: compress
----
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    {% include head.html %}
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 
-    <meta name="robots" content="noindex"> <!--=====  Please remove it ! ! !  ======-->
-    <meta name="googlebot" content="noindex"> <!--=====  Please remove it ! ! !  ======-->
-  </head>
-  <body class="{{ page.slug }}">
-    <main class="main">
-      {% include header.html %}
-      {{ content }}
-      {% include footer.html %}
-    </main>
-  </body>
+{% include head.html %}
+
+<body>
+
+   {% include header.html %}
+
+   <div class="content">
+      <div class="container">
+         {{ content }}
+      </div>
+   </div><!-- end .content -->
+
+   {% include footer.html %}
+   {% include scripts.html %}
+
+</body>
+
 </html>

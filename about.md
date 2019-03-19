@@ -1,14 +1,24 @@
 ---
-layout: page
-title: About
-permalink: /about/
-slug: about
+layout: default
+title: About Long Haul
 ---
 
-This is a Jekyll theme. You can find out more information about customizing your theme Jekyll, as well as basic documentation Jekyll use in [jekyllrb.com](http://jekyllrb.com/).
-
-You can find the source code for this theme: [github.com/nandomoreirame/zetsu]({{ site.github }})
-
-You can find the source code in Jekyll [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
-
-Theme developed by: [{{ site.author.name }}]({{ site.author.url }})
+<div class="post">
+	<h1 class="pageTitle">About Long Haul</h1>
+	<img src="{{ '/assets/img/touring.jpg' | prepend: site.baseurl }}" alt="">
+	<p class="intro">Long Haul is a minimal, long form <a href="http://jekyllrb.com">Jekyll</a> Theme. It can be used as is or customized to your hearts desire.</p>
+	<p>Long Haul was created in honor of all the hard working touring bicycles that have traversed the globe time and time again. Take it for a spin.</p>
+	<h2>Features</h2>
+	<ul>
+		<li>Built with SASS + GULP + BROWSERSYNC + AUTOPREFIXER</li>
+  		<li>SVG Social Icons from <a href="http://customizr.net/icons/">Customizr</a></li>
+  		<li><a href="http://responsive-nav.com/">Responsive Nav Menu</a></li>
+  		<li><a href="https://github.com/snaptortoise/jekyll-rss-feeds">XML Feed for RSS Readers</a></li>
+  		<li>Contact Form via <a href="http://formspree.io/">Formspree</a></li>
+      <li>5 Post Loop with excerpt on Home Page</li>
+  		<li>Previous / Next Post Navigation</li>
+      <li>Estimated Reading Time for posts</li>
+  		<li><a href="https://github.com/adobe-webplatform/dropcap.js">Drop Cap</a> on posts</li>
+  		<li><a href="http://typecast.com/blog/a-more-modern-scale-for-web-typography">A Better Type Scale</a></li>
+  	</ul>
+</div>

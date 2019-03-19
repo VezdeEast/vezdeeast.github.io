@@ -1,38 +1,16 @@
-<header class="header">
-
-  <div class="overlay">
-
-    <div class="container">
-
-      <h1 class="title">
-        <a href="{{ site.baseurl }}/">{{ site.title }}</a> <small>v2</small>
-      </h1>
-
-      <nav class="navbar">
-        <a href="#" class="menu-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </a>
-
-        <ul class="nav">
-          {% for page in site.pages %}
-            {% if page.title and page.title != 'Home' %}
-            <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-            {% endif %}
-          {% endfor %}
-          <li><a href="{{ site.author.url }}/about" target="_blank">the autor</a></li>
-          <li><a href="{{ site.github }}" target="_blank">Github</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    {% if page.slug == 'home' %}
-      <h2 class="txt-center">
-        Welcome to <strong>{{ site.title }}</strong>!
-      </h2>
-    {% endif %}
-
-  </div>
-
-</header>
+ <div class="header">
+     <div class="container">
+         <h1 class="logo"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+         <nav class="nav-collapse">
+             <ul class="noList">
+                 {% for link in site.navigation %}{% assign current = nil %}{% if page.url contains link.url or forloop.first and page.url == '/' or page.url == 'index.html' %}{% assign current = 'current' %}{% endif %}
+                 <li class="element {% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
+                     <a href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a>
+                 </li> 
+                 {% endfor %}
+                 <li> <a href="https://github.com/brianmaierjr/long-haul" target="_blank">GitHub</a></li>
+                 <li><a href="https://github.com/brianmaierjr/long-haul/archive/master.zip">Download Theme</a></li>
+             </ul>
+         </nav>
+     </div>
+ </div><!-- end .header -->
