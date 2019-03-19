@@ -6,7 +6,7 @@ categories: bonus
 comments: false
 ---
 
-{% include image.html url="/images/bonus.jpg" width="100%" description="Игровой стол БЛЭК-ДЖЕК" %}
+{% include image.html url="/images/bonus.jpg" width="100%" description="" %}
 
 ## БЕСПЛАТЫЙ СЫР ТОЛЬКО В МЫШИЛОВКЕ: БОНУСЫ 
 
