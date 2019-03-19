@@ -2,13 +2,13 @@
 title: Zetsu
 email: zetsu@domain.com
 description: Um lindo tema feito para jekyll e com o <3
-baseurl: "/zetsu"
+baseurl: "/vezdeeast.github.io"
 url: "http://vezdeeast.github.io"
 
 author:
   name     : 'Fernando Moreira'
   email    : hi@nandomoreira.me
-  url      : http://#
+  url      : http://vezdeeast.github.io
   facebook : http://facebook.com/
   twitter  : http://twitter.com/
 
