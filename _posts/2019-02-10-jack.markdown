@@ -2,8 +2,9 @@
 layout: post
 title:  "«Страховка»  в Блэк-Джек"
 date:   2019-02-10
-image: jack.jpg
 ---
+
+{% include image.html url="/assets/img/jack.jpg" width="100%" description="" %}
 
 ## ЧТО ТАКОЕ «СТРАХОВКА» В БЛЭК-ДЖЕК
 
