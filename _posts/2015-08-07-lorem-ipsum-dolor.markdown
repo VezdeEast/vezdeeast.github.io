@@ -1,25 +1,49 @@
 ---
 layout: post
-title:  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit"
-date:   2015-08-07 03:00:08
-categories: Lorem
-comments: true
+title:  "Как вести себя за рулеточным столом"
+date:   2019-02-04 03:00:08
+categories: rulet
+comments: false
 ---
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+{% include image.html url="/images/rulet.png" width="100%" description="" %}
 
-Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+## КАК ВЕСТИ СЕБЯ ЗА РУЛЕТОЧНЫМ СТОЛОМ
 
-Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+<br>Каждое казино имеет свои правила и придерживаться их крайне важно. Если речь идет о стационарной игровой площадке, то за поведением игроков следит дилер, если говорить об онлайн-казино, то порядок поддерживается специальными сетевыми алгоритмами. В любом случае, правила есть, и их нужно соблюдать, в противном случае вам запретят доступ к играм. Рулеточный стол не исключение, предлагаем ознакомиться с главными правилами.
 
-Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.
+<br><i>Это важно!</i>
 
-Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero.
+<br><i>Существует специальный игровой этикет, который необходимо соблюдать, чтобы всем присутствующим, как игрокам, так и организаторам было комфортно. Не забывайте об этом.</i>
 
-Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia.
+<br><strong>Правило №1</strong>
 
-Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus.
+<br>Не просите дилера обменять деньги на фишки. Все манипуляции с деньгами должны осуществляться до того, как вы сядете за стол. Когда рулетка запущена, против правил этикета обращаться к дилеру по денежным вопросам. 
 
-Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis. Etiam imperdiet imperdiet orci.
+<br><strong>Правило №2</strong>
 
-Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci.
+<br>Нельзя бросать свои фишки через весь стол на желаемую ячейку. Попросите дилера сделать ставку. В противном случае вы поведете себя очень не корректно, к тому же можете случайно сбить чужие фишки, чем только усугубите ситуацию.
+
+<br><strong>Правило №3</strong>
+
+<br>Если вы хотите сделать ставку по телефону, то делайте это заранее.
+
+<br><strong>Правило №4</strong>
+
+<br>Не пытайтесь забрать свои фишки самостоятельно, если ваша ставка выиграла. Не нужно тянутся через весь стол, когда придет время дилер сам подаст вам ваши фишки. Помните, все манипуляции с фишками проводит исключительно дилер. Соблюдайте дисциплину во время игры и контролируйте свои эмоции, уважайте всех игроков за вашим столом.
+
+<br><strong>Правило №5</strong>
+
+<br>Существует негласное правило: нужно поощрять крупье после своего выигрыша. Это правило хорошего тона. Безусловно, есть казино, которые запрещают подобную практику. Потому лучше вначале ознакомиться с этикетом выбранной игровой площадки.
+
+<br><strong>Правило №6</strong>
+
+<br>Не берите с собой еду и алкоголь. Многие казино запрещают прием еды за столом или распитие напитков, т.к. это нарушает правила гигиены. Игрок по неосторожности может что-то разлить или рассыпать, что может испортить дорогое игровое покрытие стола.
+
+<br><strong>Правило №7</strong>
+
+<br>Также на игровой стол нельзя ставить сумку, кошелек и прочие личные вещи.
+
+<br><strong>Правило №8</strong>
+
+<br>Не пользуетесь мобильным телефоном за столом. Если вам необходимо поговорить, то выйдете из-за стола. Телефон нельзя даже класть на игровой стол, т.к. с его помощью могут совершаться различные мошенничества, поэтому правилами казино строго запрещено использование мобильного за столом.
