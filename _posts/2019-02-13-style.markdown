@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Стили игры в покере"
-date:   2019-02-12
+date:   2019-02-13
 ---
 
 {% include image.html url="/assets/img/style.jpg" width="100%" description="" %}
