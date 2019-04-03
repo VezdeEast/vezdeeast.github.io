@@ -1,0 +1,13 @@
+<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <circle id="svg_1" fill="#ffffff" r="9.823999" cy="90.174092" cx="64"/>
+  <circle id="svg_2" fill="#ffffff" r="9.824001" cy="90.174092" cx="99.25"/>
+  <circle id="svg_3" fill="#ffffff" r="9.823999" cy="90.174092" cx="28.75"/>
+ </g>
+</svg>

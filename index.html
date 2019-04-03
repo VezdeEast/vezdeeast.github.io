@@ -1,13 +1,1284 @@
----
-layout: default
-title: A guide to your digital life
----
-<div class="listing">
-    {% for post in paginator.posts %}
-    <div class="post other link">
-      <h2></span> <a href="{{site.url}}{{post.url}}">{{ post.title }}</a></h2>
-      <p class="post-date">{{ post.date | date_to_string }}</p>
-      {{ post.excerpt }}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <title>Argo</title>
+    <meta name="description" content="Argo">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/css/swiper.min.css">
+    <link rel="stylesheet" href="https://argoreality.io/css/style.css">
+    <link rel="stylesheet" href="https://argoreality.io/css/popup.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://argoreality.io/images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://argoreality.io/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://argoreality.io/images/icons/favicon-16x16.png">
+    <link rel="manifest" href="https://argoreality.io/images/icons/site.webmanifest">
+    <link rel="mask-icon" href="https://argoreality.io/images/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="https://argoreality.io/images/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="https://argoreality.io/images/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-37733483-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37733483-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-37733483-2');
+
+        var _gaq = _gaq || [];
+        _gaq.push(
+            ['_setAccount', 'UA-37733483-2'],
+            ['_trackPageview']
+        );
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src=('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PXN4Q76');
+    </script>
+    <!-- End Google Tag Manager -->
+    <script>
+        /**
+         * Функция, отслеживающая клик по исходящей ссылке в Google Analytics.
+         */
+        var trackOutboundLink = function(url) {
+            gtag('event', 'click', {
+                'event_category': 'outbound',
+                'event_label': url,
+                'transport_type': 'beacon',
+                'event_callback': function(){document.location = url;}
+            });
+        }
+    </script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1463559887099807');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=1463559887099807&ev=PageView&noscript=1";
+        /></noscript>
+    <!-- End Facebook Pixel Code -->
+    </head>
+<body>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >     (function (d, w, c) {         (w[c] = w[c] || []).push(function() { try { w.yaCounter47793499 = new Ya.Metrika({ id:47793499, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js";          if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/47793499"; style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PXN4Q76"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <header class="header">
+        <div class="lang">
+                            <span class="eng" id="lang-toggle">Eng</span>
+                        
+            <ul>
+                                    <li><a class="eng" onclick="ga('send', 'event', 'Language', 'Switch', 'EN Language')" href="?locale=en">Eng</a></li>
+                    <li><a class="rus" onclick="ga('send', 'event', 'Language', 'Switch', 'RU Language')" href="?locale=ru">Rus</a></li>
+                             
+                <li><a class="jpn wp" target="_blank" rel="noopener" href="pdf/wp_Argo_jp.pdf" onclick="ga('send', 'event', 'click', 'whitepaper', 'japan')">Jp</a></li>
+                <li><a class="deu wp" target="_blank" rel="noopener" href="pdf/wp_Argo_de.pdf" onclick="ga('send', 'event', 'click', 'whitepaper', 'deutsche')">De</a></li>
+                <li><a class="spa wp" target="_blank" rel="noopener" href="pdf/wp_Argo_sp.pdf" onclick="ga('send', 'event', 'click', 'whitepaper', 'spain')">Sp</a></li>
+                <li><a class="chi wp" target="_blank" rel="noopener" href="pdf/wp_Argo_cn.pdf" onclick="ga('send', 'event', 'click', 'whitepaper', 'china')">Cn</a></li>
+            </ul>
+        </div>
+        <div class="lang-label">Select language</div>
+        <div class="header__account xs-visible">
+            <a href="https://argoreality.io/auth/register"  onclick="ga('send', 'event', 'click', 'signIn', 'account sign up')">Sign up</a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li class="main-nav__android"><a target="_blank" rel="noopener" href="http://goo.gl/RYP9ff">MVP app</a></li>
+                <li class="main-nav__ios"><a target="_blank" rel="noopener" href="http://goo.gl/AThGdk">MVP app</a></li>
+                <li class="main-nav__bounty"><a target="_blank" rel="noopener"  onclick="ga('send', 'event', 'click', 'bounty', 'header')" href="https://bitcointalk.org/index.php?topic=2960794">Bounty</a></li>
+                <li class="main-nav__account">
+                    <a href="https://argoreality.io/auth/register"  onclick="ga('send', 'event', 'click', 'signIn', 'account sign up')">Sign up</a>
+                </li>
+                <li class="main-nav__logout xs-visible">
+                    <a href="https://argoreality.io/auth/logout" class="xs-visible" onclick="ga('send', 'event', 'click', 'signOut', 'account_sigh_out')">Logout</a>
+                </li>
+                <!--<li><a href="#">Tutorial</a></li>-->
+                <!--<li><a href="#">Bounty</a></li>-->
+                <!-- <li><a  target="_blank" rel="noopener" href="https://argoreality.io/pdf/wp_Argo_en.pdf"
+                       onclick="ga('send', 'event', 'WhitePaper', 'Open', 'Top Menu')" >Whitepaper</a></li> -->
+            </ul>
+        </nav>
+        <div class="main-nav-toggle xs-visible" id="mob-menu" aria-label="Main menu"></div>
+    </header>
+
+
+
+
+
+    <section class="main-screen">
+        <div class="container">
+            <h1>ARGO</h1>
+            <div class="subheading">shows more</div>
+            <div class="social social--header">
+                <a target="_blank" rel="noopener" class="soc soc--fb" href="https://www.facebook.com/Argo-751423075065305/" title="Facebook link"   onclick="ga('send', 'event', 'click', 'facebook', 'header')" ></a>
+                <a target="_blank" rel="noopener" class="soc soc--twi" href="https://twitter.com/argoproject_io" title="Twitter link"   onclick="ga('send', 'event', 'click', 'twitter', 'header')" ></a>
+                <a target="_blank" rel="noopener" class="soc soc--btc" href="https://bitcointalk.org/index.php?topic=2955182" title="BitcoinTalk link"   onclick="ga('send', 'event', 'click', 'bitcointalk', 'header')" ></a>
+                <a target="_blank" rel="noopener" class="soc soc--tg" href="https://t.me/joinchat/H48HbRBuUFqgFR-sEcY8mQ" title="Telegram link"  onclick="ga('send', 'event', 'click', 'telegram', 'header')" ></a>
+                <a target="_blank" rel="noopener" class="soc soc--github" href="https://github.com/VasiliAlt/ARGO" target="_blank" rel="noopener" title="Github link"></a>
+                <!--a.soc.soc--github(href="#", title="Github link")-->
+                <a target="_blank" rel="noopener" class="soc soc--medium" href="https://medium.com/@argoproject" title="Medium link"  onclick="ga('send', 'event', 'click', 'medium', 'header')" ></a>
+                <a target="_blank" rel="noopener" class="soc soc--linkedin" href="https://www.linkedin.com/company/argoproject-io/" title="LinkedIn link"  onclick="ga('send', 'event', 'click', 'linkedIn', 'header')" ></a>
+                <!--a.soc.soc--reddit(href="#", title="Reddit link")-->
+            </div>
+            <div class="progress-wrapper">
+                <div class="progress">
+                  <div class="progress__left">
+                    <p>Venture funding:</p>
+                  </div>
+                  <div class="progress__line">
+                    <div class="progress__fill" style="width:100%;"></div>
+                  </div>
+                  <div class="progress__left">
+                    <p class="money-current"><b>250 ETH</b> in equivalent</p>
+                  </div>
+                </div>
+                <div class="progress progress--big">
+                  <div class="progress__left">
+                    <p>Pre ICO:</p>
+                  </div>
+                  <div class="progress__line">
+                    <div class="progress__fill" style="width:0;"></div>
+                  </div>
+                  <div class="progress__left">
+                      <p><b>In progress</b></p>
+                  </div>
+                  <div class="progress__right">
+                    <p><b>531 ETH</b></p>
+                  </div>
+                </div>
+              </div>
+            <div class="main-screen__info block-shadow">
+                <h2>ARGO</h2>
+                <div class="info-txt">
+                    <p>ARGO is an entertaining space in augmented reality. Receive gifts, play, communicate in AR.</p>
+                </div>
+                <a target="_blank" onclick="ga('send', 'event', 'click', 'buy', 'buy top')" rel="noopener" class="btn" href="https://argoreality.io/account">Buy tokens</a>
+                <a target="_blank" onclick="ga('send', 'event', 'click', 'whitepapereng', 'learnmore Youtube')" rel="noopener" class="btn btn--secondary" href="https://argoreality.io/pdf/wp_Argo_en.pdf">Learn More</a>
+            </div>
+            
+                
+                
+                
+                
+                
+            
+            <div class="btns xs-visible">
+                <!--<a target="_blank" rel="noopener" class="btn"  onclick="ga('send', 'event', 'click', 'whitepapereng', 'Learn more2')" href="https://argoreality.io/pdf/wp_Argo_en.pdf">Learn More</a> -->
+                <a target="_blank" rel="noopener" class="btn" href="https://argoreality.io/account" onclick="ga('send', 'event', 'click', 'buy', 'Buy ')">Buy tokens</a></div>
+        </div>
+    </section>
+    <section class="main-info container"><p><b>Basic token price</b> during ICO — 0.000023 ETH.</p>  <p><b>Token price during Pre ICO</b> 0.000008-0.000016 depending on bonus applied.</p>  <p><b>Bonuses available during Pre ICO:</b></p>  <ul>  <li>50% on 1-2 days of sale;</li>  <li>40% on 3-4 days of sale;</li>  <li>30% on 5-6 days of sale;</li>  <li>20% on 6-8 days of sale.</li>  </ul>  <p>Pre ICO is deemed successful in case 33.2 mn. of tokens have been sold.</p>
+        <div class="xs-visible main-info__btn"><img src="/images/arrow-down.png" width="335" height="243">
+          <div class="btns">
+            <!--<a target="_blank" rel="noopener" class="btn btn--secondary" href="https://argoreality.io/account">Buy tokens</a>-->
+          </div>
+        </div>
+    </section>
+    <section class="what-we-do">
+        <div class="container row">
+            <div class="what-we-do__left"><h2 class="section-heading">Detailed product description</h2>  <p>For the generation Z online has become a customary habitat. Those businesses who can endow the physical world around with all the properties of the digital one will strategically win.</p>  <p>In July 2017 within the framework of this logic we launched to the market our minimum viable product Go2me.</p>  <p>It was a series of mobile quests using augmented reality. Players enjoyed a variety of tangible prizes - goods and coupons for popular brands. The MVP was done in partnership with one of the largest shopping centers in Minsk.</p></div>
+            <div class="what-we-do__right">
+                <div class="video block-shadow">
+                    <iframe class="video-img"  onclick="ga('send', 'event', 'click', 'youtube', 'center')" width="750" height="508" src="https://www.youtube.com/embed/0SIROHL23VI?rel=0&amp;showinfo=0"  frameborder="0" allowfullscreen=""></iframe>
+                    <a target="_blank" onclick="ga('send', 'event', 'click', 'buy', 'buy top')" rel="noopener" class="btn" href="https://argoreality.io/account">Buy tokens</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="we-are">
+        <div class="container row row--nowrap">
+            <div class="we-are__left"><h2 class="section-heading">Basic usage scenario</h2><ol>  <li>The user enters the screen with a list of gifts. Tap on one of the gifts initiates the map mode;</li>  <li>On the map one sees a variety of sites with AR-games sites, quests, places of interactions of users;</li>  <li>A victory in a certain AR game brings user score points;</li>  <li>When required amount of points is obtained the "Collect prize" button and timer go on;</li>  <li>The delivery of gifts is carried out in the places specified by the rules. The QR code is scanned to confirm the transaction.</li></ol></div><img class="we-are__right" src="/images/phones_en.png" alt="App screenshots">
+        </div>
+    </section>
+    <section class="statistics container">
+        <h2 class="section-heading">During test run the MVP demonstrated excellent metrics</h2>
+        <div class="row mvp-info">
+            <div class="third mvp-info__item">
+                <div class="mvp-info__number">47,3%</div>
+                <div class="mvp-info__txt">is the user retention on the 30th day after installation. The world's average is about 20%</div>
+            </div>
+            <div class="third mvp-info__item">
+                <div class="mvp-info__number">4,2</div>
+                <div class="mvp-info__txt">is the MVP user rating in Google Play</div>
+            </div>
+            <div class="third mvp-info__item">
+                <div class="mvp-info__number">8</div>
+                <div class="mvp-info__txt">is a number of brands wishing to take part in the very first MVP run.</div>
+            </div>
+        </div>
+        <div class="btns"><a target="_blank" rel="noopener" onclick="ga('send', 'event', 'click', 'buy', 'buy center')" class="btn" href="https://argoreality.io/account">Buy tokens</a></div>
+    </section>
+    <section class="market container">
+        <h2 class="section-heading">Market for mobile application ARGO</h2>
+        <div class="row row--nowrap">
+            <div class="half"><p>Every year the average number of people interacting with augmented reality increases by 35%. Almost 2.5 billion people start and end their day on the smartphone screen.</p>    <p><b>The necessity of integration of AR into everyday routine is no more a subject of discussion. The question is who makes it first.</b></p><img src="/images/market1.png"></div>
+            <div class="half"><img src="/images/market2.png"><p>Capitalization is growing following the volume of the audience.</p>    <p>As early as 2017 AR provides growth of 186.5% compared to 2016. By 2021, experts predict an increase in revenues to 215 billion dollars.</p>    <p><b>The financial potential of the market for ARGO is huge. The distance from $ 11.4 to $ 215 billion will be overcome in just 4 years.</b></p>
+            </div>
+        </div>
+    </section>
+    <section class="distribution">
+        <div class="container">
+            <div class="argo"><img src="/images/argo.png" alt="Argo">
+            </div><img class="scheme" src="/images/scheme_en.svg" alt="System scheme">
+            <div class="distribution-txt">
+                <h2 class="section-heading">Use of tokens</h2><p>All the user activities within ARGO are available only through usage of ARGO tokens.</p>
+            </div>
+        </div>
+    </section>
+    <section class="roadmap container">
+        <div class="roadmap-goals row row--nowrap">
+            <div class="half xs-full">
+                <h2 class="section-heading">PRE-ICO</h2><p>For the moment the team’s main goal is to gather like-minded people among future users and use their feedback to define the vectors of ARGO construction.</p>    <p>The Pre ICO financial aim is to gather 531 ETH.</p>
+            </div>
+            <div class="half xs-full">
+                <!-- <div class="stats">
+                    <div class="stats__item">
+                        <p>ETH raised</p>
+                        <p class="stats__value">0</p>
+                    </div>
+                    <div class="stats__item">
+                        <p>ETH soft cap</p>
+                        <p class="stats__value">531</p>
+                    </div>
+                </div> -->
+                
+                    
+                    
+                    
+                    
+                
+            </div>
+        </div>
+        <h2 class="section-heading roadmap-h">Roadmap</h2>
+        <div class="path">
+            <div class="step step--1 step--done">
+                <div class="step__number">1</div>
+                <div class="step__info">
+                    <div class="step__date">02.2017</div>
+                    <p>Concept development</p>
+                </div>
+            </div>
+            <div class="step step--2 step--done">
+                <div class="step__number">2</div>
+                <div class="step__info">
+                    <div class="step__date">05.2017</div>
+                    <p>Prototype development</p>
+                </div>
+            </div>
+            <div class="step step--3 step--done">
+                <div class="step__number">3</div>
+                <div class="step__info">
+                    <div class="step__date">08.2017</div>
+                    <p>MVP test run</p>
+                </div>
+            </div>
+            <div class="step step--4">
+                <div class="step__number">4</div>
+                <div class="step__info">
+                    <div class="step__date">03.2018</div>
+                    <p>Pre-ICO</p>
+                </div>
+            </div>
+            <div class="step step--5">
+                <div class="step__number">5</div>
+                <div class="step__info">
+                    <div class="step__date">06.2018</div>
+                    <p>Soft launch in Minsk/Belarus</p>
+                </div>
+            </div>
+            <div class="step step--6">
+                <div class="step__number">6</div>
+                <div class="step__info">
+                    <div class="step__date">12.2018</div>
+                    <p>Soft Launch in London/UK</p>
+                </div>
+            </div>
+            <div class="step step--7">
+                <div class="step__number">7</div>
+                <div class="step__info">
+                    <div class="step__date">06.2019</div>
+                    <p>Full scale launch in London/UK</p>
+                </div>
+            </div>
+            <div class="step step--8">
+                <div class="step__number">8</div>
+                <div class="step__info">
+                    <div class="step__date">06.2019</div>
+                    <p>Project scaling in major cities.</p>
+                </div>
+            </div>
+        </div>
+        <div class="roadmap-coins1"></div>
+        <div class="roadmap-coins2"></div>
+        <div class="btns btns--column">
+            <a target="_blank" onclick="ga('send', 'event', 'click', 'buy', 'buy bottom')" rel="noopener" class="btn" href="https://argoreality.io/account">Buy tokens</a>
+        </div>
+
+    </section>
+    <section class="faq container">
+        <h2 class="section-heading">Frequently asked questions</h2>
+        <div class="accordion" id="accordion1">
+            <div class="panel">
+                <div class="panel__header block-shadow">1. What are ARGO tokens for?</div>
+                <div class="panel__body">Possession of ARGO tokens entitles a user to participate in the creation and development of ARGO augmented reality layer.<br>      Using a specified number of ARGO tokens the user may join AR games, walk through special AR quests, place texts, photos, videos, stickers and 3D objects in AR.<br>      At the same time the user can earn new tokens with their activities:  likes, views, wins, prizes redeemed, other actions taken.<br>      Thus the ARGO token is the central resource for interactions within ARGO AR system.</div>
+            </div>
+            <div class="panel">
+                <div class="panel__header block-shadow">2. How can one buy ARGO tokens?</div>
+                <div class="panel__body"><ul>  <li>Tokens can be purchased for ETH during Pre ICO or ICO.</li>      <li>Tokens will be given to the most active users. Popularity, creativity, and activity rate will be taken into consideration.</li>      </ul></div>
+            </div>
+            <div class="panel">
+                <div class="panel__header block-shadow">3. How can one download the app?</div>
+                <div class="panel__body">Now the MVP application only is available on Google Play (Go2Me) and Appstore (Go2Me). It demonstrates starting interface and principle of work of prize menu. The AR activities are now restricted to the test geography only — Minsk/Belarus. Soon we begin test run in London/UK. Afterwards ARGO will be open in other cities.
+                    <p>
+                        <a target="_blank" rel="noopener" class="mvp-info__number" href="http://goo.gl/RYP9ff"><img src ="/images/mvp_android_download.png" alt=" Download from Google Play"></a>
+                        <a target="_blank" rel="noopener" class="mvp-info__number" href="http://goo.gl/AThGdk"><img src ="/images/mvp_apple_download.png" alt="Download from Apple store"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="team xs-visible">
+    <h2>Project leaders</h2>
+    <div class="swiper-container">
+      <div class="row row--justify container swiper-wrapper">
+        <div class="team-card block-shadow swiper-slide">
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/alexey.png" alt="Alexey"></div>
+              <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/alexey-pushkarev-2252918/" data-label="Alexey LinkedIn link"   onclick="ga('send', 'event', 'click', 'linkedIn', 'Alexey')" ></a>
+          </div>
+          <div class="team-card__name">Alexey Pushkarev</div>
+          <div class="team-card__txt">15-year experience as top manager, incl. 10 years top position with a large Eastern European packaging producer; MBA, University of New Brunswick, Canada; specialist in sustainable corporate development; experienced in managing marketing and sales.</div>
+        </div>
+        <div class="team-card block-shadow swiper-slide">
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/chrichton.png" alt="Crichton"></div>
+              <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/crichton-brauer-39944341/" data-label="Crichton LinkedIn link"  onclick="ga('send', 'event', 'click', 'linkedIn', 'Crichton')" ></a>
+          </div>
+          <div class="team-card__name">Crichton Brauer</div>
+          <div class="team-card__txt">Owner and investor over the past 15 years in businesses in both Russia and the UK. Additionally, provided business trainings to numerous international companies on growth and development. Further been working as a consultant for Sell2Me in the UK since 2016. Have followed closely crowd funding developments especially based around crypto currency.</div>
+        </div>
+        <div class="team-card block-shadow swiper-slide">
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/dmitry.png" alt="Dmitry"></div>
+              <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/%D0%B4%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9-%D0%B5%D0%B7%D0%B5%D1%80%D1%81%D0%BA%D0%B8%D0%B9-44aab14b/" data-label="Dmitry LinkedIn link"  onclick="ga('send', 'event', 'click', 'linkedIn', 'Dmitry')" ></a>
+          </div>
+          <div class="team-card__name">Dmitry Ezersky</div>
+          <div class="team-card__txt">Expert in finance, venture capital and securities; investor and mentor for several IT and industrial projects; profound professional experience in banking business.</div>
+        </div>
+        <div class="team-card block-shadow swiper-slide">
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/vasily2.png" alt="Vasily"></div>
+              <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/veko-vasily-194a346/" data-label="Vasily LinkedIn link"  onclick="ga('send', 'event', 'click', 'linkedIn', 'Vasily')" ></a>
+          </div>
+          <div class="team-card__name">Vasily Veko</div>
+          <div class="team-card__txt">Entrepreneur, visionary; Altwolf Software founder and managing partner; PhD Math, Belarusian State University; 18+ years experience in innovative development of mass-multiserver, 3D, AR | VR cross-industry products; creator of C.H.A.O.S. helicopter simulator (more than 30 mn. downloads worldwide).</div>
+        </div>
+        <div class="team-card block-shadow swiper-slide">
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/team/yamaguchi.jpg" alt="Hidefumi Yamaguchi"></div>
+              <a target="_blank" rel="noopener" class="facebook" href="https://www.facebook.com/hidefrumi.yamaguchi" ></a>
+          </div>
+          <div class="team-card__name">Hidefumi Yamaguchi</div>
+          <div class="team-card__txt">Director of international project of "Kaisin" company in Kumamoto, Kyushu. Former Director of the Medical Foundation "Help to Chernobyl", Kyushu. Professional consultant in business relations between Japan and the Republic of Belarus. Interpreter. For over 10 years have been assisting the Embassy of Belarus in Japan. Director of the Jukendo Federation in Oita Prefecture. Attested for: Tankendo - 8 dan, Jukendo - 7 dan, and Kendo - 5 dan. Member of the international education project of Zen Buddhism in Belarus.</div>
+        </div>
+        <div class="team-card block-shadow swiper-slide">
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/team/lavrinovich.jpg" alt="Aliaksandr Laurynovich"></div>
+          </div>
+          <div class="team-card__name">Aliaksandr Laurynovich</div>
+          <div class="team-card__txt">Lead Android Developer – ARGO Project.<br>Full stack Android and back-end developer with over 15 years of experience in Software development. With Java as main development platform created server-side web and mobile applications for business customers. Proficient at 3D modelling and software development with Unity, Unreal Engine, Vuforia,
+Wikitude and other modern platforms.</div>
+        </div>
+        <div class="team-card block-shadow swiper-slide">
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/team/soloviev.jpg" alt="Artsiom Salauyou"></div>
+            <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/artsiom-salauyou-9973b955/" ></a>
+          </div>
+          <div class="team-card__name">Artsiom Salauyou</div>
+          <div class="team-card__txt">Lead iOS Developer – ARGO Project. An experienced mobile software developer with significant design, support, administration and implementation experience of iOS and multiplatform projects. Over 12 years of IT experience with full life cycle project experience, particularly in the client-server and multimedia applications. Started working with Augmented Reality projects in 2012 using different hardware and software.</div>
+        </div>
+        <div class="team-card block-shadow swiper-slide">
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/team/zharnovskaya.jpg" alt="Nastassia Zharnouskaya"></div>
+            <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/nastassia-zharnouskaya-548a5482/" ></a>
+          </div>
+          <div class="team-card__name">Nastassia Zharnouskaya</div>
+          <div class="team-card__txt">Lead UX/UI designer / graphic designer – ARGO Project. Responsible for UI &amp; UX for mobile applications on Android and iOS, as well as Web applications and sites. Has a profound knowledge of Adobe products and tools. Experienced in conceptualization of product features, streamline design, asset generation for the iOS &amp; Android apps, as well as marketing collateral, including ads, print, etc. Strong visual design skills and modern pattern knowledge. </div>
+        </div>
+        <div class="team-card block-shadow swiper-slide">
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/team/hisham.jpg" alt="Hisham Al Otaibi"></div>
+            <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/hishammba/" ></a>
+          </div>
+          <div class="team-card__name">Hisham Al Otaibi</div>
+          <div class="team-card__txt">Over 18 years of strong experience in U.A.E., Saudi Arabia, Oman, Kuwait, and also Canada and U.S.A. Contributed to various projects involving building market presence and starting up new companies. Has broad knowledge and hands on experience in bid preparation, venture planning, financial analysis, financial modeling, and investment evaluation.</div>
+        </div>
+        <div class="team-card block-shadow swiper-slide">
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/team/tishin.jpg" alt="Igor Tishin"></div>
+              <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/igor-tishin-32bb45a/" ></a>
+          </div>
+          <div class="team-card__name">Igor Tishin</div>
+          <div class="team-card__txt">The permanent head of EagleDynamics, what for 20 years leads the company from success to success. Launched in 1995 with the Flanker project, the company created many flying simulators such as LockOn, DCS. He is not afraid to look at something new and study it. <br>Candidate of Physical Sciences. A constant study of something new. His life credo is learning.</div>
+        </div>
+        <div class="team-card block-shadow swiper-slide">
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/team/mattias.jpg" alt="Matthias Techmanski"></div>
+              <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/matthias-techmanski-18b55847/" ></a>
+          </div>
+          <div class="team-card__name">Matthias Techmanski</div>
+          <div class="team-card__txt">A young ambitious entrepreneur, a tireless marketer who is looking for both like-minded people and the most convenient way to communicate and offer his services to people</div>
+        </div>
+        <div class="team-card block-shadow swiper-slide">
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/team/mashchenski.jpg" alt="Vladimir Mashchenski"></div>
+              <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/vladimir-mashchenski-4795a04/" ></a>
+          </div>
+          <div class="team-card__name">Vladimir Mashchenski</div>
+          <div class="team-card__txt">Talented developer<br> Ideological inspiration and creative entrepreneur in work and leisure. Master Qigong. To work hard you need to rest well. And to have a good rest you need a lot of health.</div>
+        </div>
+        <div class="team-card block-shadow swiper-slide">
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/team/irina.jpg" alt="Irina Peredriy"></div>
+              <a target="_blank" rel="noopener" class="facebook" href="https://www.facebook.com/irina.peredriy" ></a>
+          </div>
+          <div class="team-card__name">Irina Peredriy</div>
+          <div class="team-card__txt">Marketing Lead<br>
+Responsible for ARGO online marketing and PR. 8 years of marketing experience and journalism. She has launched more than 100 online projects, both e-commerce and service. Strongly believe that team, creativity and soft skills are as important as hard skills.</div>
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
-    {% endfor %}
+  </section>
+  <section class="team xs-hidden">
+    <h2>Project leaders</h2>
+     <div class="container swiper-container" id="team-slider">
+        <div class="swiper-wrapper">
+      <div class="team-card block-shadow">
+        <div class="photo-wrap">
+          <div class="photo"><img src="/images/alexey.png" alt="Alexey"></div><a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/alexey-pushkarev-2252918/" data-label="Alexey LinkedIn link"></a>
+        </div>
+        <div class="team-card__name">Alexey Pushkarev</div>
+        <div class="team-card__txt">15-year experience as top manager, incl. 10 years top position with a large Eastern European packaging producer; MBA, University of New Brunswick, Canada; specialist in sustainable corporate development; experienced in managing marketing and sales.</div>
+        <div class="team-card__more" id="btn-alexey"></div>
+      </div>
+      <div class="team-card block-shadow">
+        <div class="photo-wrap">
+          <div class="photo"><img src="/images/chrichton.png" alt="Crichton"></div><a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/crichton-brauer-39944341/" data-label="Crichton LinkedIn link"></a>
+        </div>
+        <div class="team-card__name">Crichton Brauer</div>
+        <div class="team-card__txt">Owner and investor over the past 15 years in businesses in both Russia and the UK. Additionally, provided business trainings to numerous international companies on growth and development. Further been working as a consultant for Sell2Me in the UK since 2016. Have followed closely crowd funding developments especially based around crypto currency.</div>
+        <div class="team-card__more" id="btn-crichton"></div>
+      </div>
+      <div class="team-card block-shadow">
+        <div class="photo-wrap">
+          <div class="photo"><img src="/images/dmitry.png" alt="Dmitry"></div><a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/%D0%B4%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9-%D0%B5%D0%B7%D0%B5%D1%80%D1%81%D0%BA%D0%B8%D0%B9-44aab14b/" data-label="Dmitry LinkedIn link"></a>
+        </div>
+        <div class="team-card__name">Dmitry Ezersky</div>
+        <div class="team-card__txt">Expert in finance, venture capital and securities; investor and mentor for several IT and industrial projects; profound professional experience in banking business.</div>
+        <div class="team-card__more" id="btn-dmitry"></div>
+      </div>
+      <div class="team-card block-shadow">
+        <div class="photo-wrap">
+          <div class="photo"><img src="/images/vasily.png" alt="Vasily"></div><a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/veko-vasily-194a346/" data-label="Vasily LinkedIn link"></a>
+        </div>
+        <div class="team-card__name">Vasily Veko</div>
+        <div class="team-card__txt">Entrepreneur, visionary; Altwolf Software founder and managing partner; PhD Math, Belarusian State University; 18+ years experience in innovative development of mass-multiserver, 3D, AR | VR cross-industry products; creator of C.H.A.O.S. helicopter simulator (more than 30 mn. downloads worldwide).</div>
+        <div class="team-card__more" id="btn-vasily"></div>
+      </div>
+      <div class="team-card block-shadow">
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/team/yamaguchi.jpg" alt="Hidefumi Yamaguchi"></div>
+              <a target="_blank" rel="noopener" class="facebook" href="https://www.facebook.com/hidefrumi.yamaguchi" ></a>
+          </div>
+          <div class="team-card__name">Hidefumi Yamaguchi</div>
+          <div class="team-card__txt">Director of international project of "Kaisin" company in Kumamoto, Kyushu. Former Director of the Medical Foundation "Help to Chernobyl", Kyushu. Professional consultant in business relations between Japan and the Republic of Belarus. Interpreter. For over 10 years have been assisting the Embassy of Belarus in Japan. Director of the Jukendo Federation in Oita Prefecture. Attested for: Tankendo - 8 dan, Jukendo - 7 dan, and Kendo - 5 dan. Member of the international education project of Zen Buddhism in Belarus.</div>
+        <div class="team-card__more" id="btn-yamaguchi"></div>
+        </div>
+        <div class="team-card block-shadow">
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/team/lavrinovich.jpg" alt="Aliaksandr Laurynovich"></div>
+          </div>
+          <div class="team-card__name">Aliaksandr Laurynovich</div>
+          <div class="team-card__txt">Lead Android Developer – ARGO Project.<br>Full stack Android and back-end developer with over 15 years of experience in Software development. With Java as main development platform created server-side web and mobile applications for business customers. Proficient at 3D modelling and software development with Unity, Unreal Engine, Vuforia,
+Wikitude and other modern platforms.</div>
+        </div>
+        <div class="team-card block-shadow">
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/team/soloviev.jpg" alt="Artsiom Salauyou"></div>
+            <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/artsiom-salauyou-9973b955/" ></a>
+          </div>
+          <div class="team-card__name">Artsiom Salauyou</div>
+          <div class="team-card__txt">Lead iOS Developer – ARGO Project. An experienced mobile software developer with significant design, support, administration and implementation experience of iOS and multiplatform projects. Over 12 years of IT experience with full life cycle project experience, particularly in the client-server and multimedia applications. Started working with Augmented Reality projects in 2012 using different hardware and software.</div>
+        </div>
+        <div class="team-card block-shadow ">
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/team/zharnovskaya.jpg" alt="Nastassia Zharnouskaya"></div>
+            <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/nastassia-zharnouskaya-548a5482/" ></a>
+          </div>
+          <div class="team-card__name">Nastassia Zharnouskaya</div>
+          <div class="team-card__txt">Lead UX/UI designer / grafic designer – ARGO Project. Responsible for UI &amp; UX for mobile applications on Android and iOS, as well as Web applications and sites. Has a profound knowledge of Adobe products and tools. Experienced in conceptualization of product features, streamline design, asset generation for the iOS &amp; Android apps, as well as marketing collateral, including ads, print, etc. Strong visual design skills and modern pattern knowledge. </div>
+        </div>
+        <div class="team-card block-shadow">
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/team/hisham.jpg" alt="Hisham Al Otaibi"></div>
+            <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/hishammba/" ></a>
+          </div>
+          <div class="team-card__name">Hisham Al Otaibi</div>
+          <div class="team-card__txt">Over 18 years of strong experience in U.A.E., Saudi Arabia, Oman, Kuwait, and also Canada and U.S.A. Contributed to various projects involving building market presence and starting up new companies. Has broad knowledge and hands on experience in bid preparation, venture planning, financial analysis, financial modeling, and investment evaluation.</div>
+        </div>
+        <div class="team-card block-shadow">
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/team/tishin.jpg" alt="Igor Tishin"></div>
+              <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/igor-tishin-32bb45a/" ></a>
+          </div>
+          <div class="team-card__name">Igor Tishin</div>
+          <div class="team-card__txt">The permanent head of EagleDynamics, what for 20 years leads the company from success to success. Launched in 1995 with the Flanker project, the company created many flying simulators such as LockOn, DCS. He is not afraid to look at something new and study it. <br>Candidate of Physical Sciences. A constant study of something new. His life credo is learning.</div>
+        </div>
+        <div class="team-card block-shadow">
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/team/mattias.jpg" alt="Matthias Techmanski"></div>
+              <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/matthias-techmanski-18b55847/" ></a>
+          </div>
+          <div class="team-card__name">Matthias Techmanski</div>
+          <div class="team-card__txt">A young ambitious entrepreneur, a tireless marketer who is looking for both like-minded people and the most convenient way to communicate and offer his services to people</div>
+        </div>
+        <div class="team-card block-shadow">
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/team/mashchenski.jpg" alt="Vladimir Mashchenski"></div>
+              <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/vladimir-mashchenski-4795a04/" ></a>
+          </div>
+          <div class="team-card__name">Vladimir Mashchenski</div>
+          <div class="team-card__txt">Talented developer<br> Ideological inspiration and creative entrepreneur in work and leisure. Master Qigong. To work hard you need to rest well. And to have a good rest you need a lot of health.</div>
+        </div>
+        <div class="team-card block-shadow">
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/team/irina.jpg" alt="Irina Peredriy"></div>
+              <a target="_blank" rel="noopener" class="facebook" href="https://www.facebook.com/irina.peredriy" ></a>
+          </div>
+          <div class="team-card__name">Irina Peredriy</div>
+          <div class="team-card__txt">Marketing Lead<br>
+Responsible for ARGO online marketing and PR. 8 years of marketing experience and journalism. She has launched more than 100 online projects, both e-commerce and service. Strongly believe that team, creativity and soft skills are as important as hard skills.</div>
+        </div>
+
 </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </section>
+  <section class="experience container">
+      <h2>Experience and partners</h2>
+      <div class="row row--justify">
+        <div class="exp-item" id="info-microsoft"><img src="/images/microsoft.png" alt="Microsoft"></div>
+        <div class="exp-item" id="info-intel"><img src="/images/intel.png" alt="Intel"></div>
+        <div class="exp-item" id="info-pirates"><img src="/images/pirates.png" alt="Pirates"></div>
+        <div class="exp-item" id="info-chaos"><img src="/images/chaos.png" alt="Chaos"></div>
+        <div class="exp-item" id="info-dcs"><img src="/images/dcs.png" alt="DCS"></div>
+      </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="btns cta">
+                <!--<a target="_blank" rel="noopener" class="btn" href="https://argoreality.io/account">Buy tokens</a>-->
+                 <!--<a target="_blank" rel="noopener"  onclick="ga('send', 'event', 'click', 'subscribe', 'en')" class="btn btn--secondary" id="sub" href="#">Subscribe</a> -->
+            </div>
+            <div class="social social--footer">
+                <a target="_blank" rel="noopener" class="soc soc--fb" href="https://www.facebook.com/Argo-751423075065305/" target="_blank" rel="noopener" title="Facebook link"   onclick="ga('send', 'event', 'click', 'facebook', 'footer')" ></a>
+                <a target="_blank" rel="noopener" class="soc soc--twi" href="https://twitter.com/argoproject_io" title="Twitter link" target="_blank" rel="noopener"  onclick="ga('send', 'event', 'click', 'twitter', 'footer')" ></a>
+                <a target="_blank" rel="noopener" class="soc soc--btc" href="https://bitcointalk.org/index.php?topic=2955182" title="BitcoinTalk link" target="_blank" rel="noopener"  onclick="ga('send', 'event', 'click', 'bitcointalk', 'footer')" ></a>
+                <a target="_blank" rel="noopener" class="soc soc--tg" href="https://t.me/joinchat/H48HbRBuUFqgFR-sEcY8mQ" title="Telegram link" target="_blank" rel="noopener"  onclick="ga('send', 'event', 'click', 'telegram', 'footer')" ></a>
+                <a target="_blank" rel="noopener" class="soc soc--github" href="https://github.com/VasiliAlt/ARGO" target="_blank" rel="noopener" title="Github link"></a>
+                <!--a.soc.soc--github(href="#", title="Github link")-->
+                <a target="_blank" rel="noopener" class="soc soc--medium" href="https://medium.com/@argoproject" title="Medium link" target="_blank" rel="noopener"  onclick="ga('send', 'event', 'click', 'medium', 'footer')" ></a>
+                <a target="_blank" rel="noopener" class="soc soc--linkedin" href="https://www.linkedin.com/company/argoproject-io/" title="LinkedIn link" target="_blank" rel="noopener"  onclick="ga('send', 'event', 'click', 'linkedIn', 'footer')" ></a>
+                <!--a.soc.soc--reddit(href="#", title="Reddit link")-->
+            </div>
+            <nav class="main-nav main-nav--footer">
+                <span>ARGO</span>
+                <ul>
+                    <!--<li><a target="_blank" rel="noopener" href="#">Tutorial</a></li>
+                    <li><a target="_blank" rel="noopener" href="#">Bounty</a></li> -->
+                    <li><a target="_blank" rel="noopener"  onclick="ga('send', 'event', 'click', 'whitepapereng', 'Footer')" href="https://argoreality.io/pdf/wp_Argo_en.pdf">Whitepaper</a></li>
+                    <li>
+                        <a target="_blank" rel="noopener" href="pdf/privacy_policy.pdf" target="_blank" rel="noopener"   onclick="ga('send', 'event', 'Privacy Policy', 'Open', 'footer')" >Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="https://www.trackico.io/" target="_blank" title="TrackICO">
+                            <img border="0" src="https://www.trackico.io/static/img/partner_logo_white.png"
+                                 alt="TrackICO - provider of information about the best ICOs"
+                                 height="25px">
+                        </a>
+                    </li>
+
+                </ul>
+                <a class="icocra" href="http://icocra.com/" title="ICOcra.com"><img src="/images/icocra.png" alt="ICOcra.com" height="60"></a>
+
+            </nav>
+        </div>
+        <div class="footer-img"><img class="footer-bg" src="/images/footer-bg.png"><img class="footer-logo" src="/images/footer-logo.png"><img class="footer-hand" src="/images/footer-hand_only.png"></div>
+    </footer>
+    <div class="content-copy" id="content-copy">
+        <header class="header">
+            <ul class="lang">
+                <li><a target="_blank" rel="noopener" href="/">Eng</a><a target="_blank" rel="noopener" href="/ru/">Rus</a></li>
+            </ul>
+            <nav class="main-nav">
+                <ul>
+                    <!-- <li><a target="_blank" rel="noopener" href="#">Tutorial</a></li>
+                    <li><a target="_blank" rel="noopener" href="#">Bounty</a></li> -->
+                    <li><a target="_blank" rel="noopener"   onclick="ga('send', 'event', 'click', 'whitepapereng', 'main-nav')" href="https://argoreality.io/pdf/wp_Argo_en.pdf" target="_blank" rel="noopener">Whitepaper</a></li>
+                </ul>
+            </nav>
+            <div class="account"><a target="_blank" rel="noopener" href="/login/"   onclick="ga('send', 'event', 'click', 'signIn', 'account sigh in')"  >Sign In</a></div>
+        </header>
+        <section class="main-screen">
+            <div class="container">
+                <h1>ARGO</h1>
+                <div class="subheading">shows more</div>
+                <div class="social social--header">
+                    <a target="_blank" rel="noopener" class="soc soc--fb" href="https://www.facebook.com/Argo-751423075065305/" title="Facebook link" target="_blank" rel="noopener"></a>
+                    <a target="_blank" rel="noopener" class="soc soc--twi" href="https://twitter.com/argoproject_io" title="Twitter link" target="_blank" rel="noopener"></a>
+                    <a target="_blank" rel="noopener" class="soc soc--btc" href="https://bitcointalk.org/index.php?topic=2955182" title="BitcoinTalk link" target="_blank" rel="noopener"></a>
+                    <a target="_blank" rel="noopener" class="soc soc--tg" href="https://t.me/joinchat/H48HbRBuUFqgFR-sEcY8mQ" title="Telegram link" target="_blank" rel="noopener"></a>
+                    <a target="_blank" rel="noopener" class="soc soc--github" href="https://github.com/VasiliAlt/ARGO" target="_blank" rel="noopener" title="Github link"></a>
+                    <!--a.soc.soc--github(href="#", title="Github link")-->
+                    <a target="_blank" rel="noopener" class="soc soc--medium" href="https://medium.com/@argoproject" title="Medium link" target="_blank" rel="noopener"></a>
+                    <a target="_blank" rel="noopener" class="soc soc--linkedin" href="https://www.linkedin.com/company/argoproject-io/" title="LinkedIn link" target="_blank" rel="noopener"></a>
+                    <!--a.soc.soc--reddit(href="#", title="Reddit link")-->
+                </div>
+                <div class="progress-wrapper">
+                    <div class="progress">
+                      <div class="progress__left">
+                        <p>Venture founding:</p>
+                      </div>
+                      <div class="progress__line">
+                        <div class="progress__fill" style="width:100%;"></div>
+                      </div>
+                      <div class="progress__left">
+                        <p class="money-current"><b>250 ETH</b> in equivalent</p>
+                      </div>
+                    </div>
+                    <div class="progress progress--big">
+                      <div class="progress__left">
+                        <p>Pre ICO:</p>
+                      </div>
+                      <div class="progress__line">
+                        <div class="progress__fill" style="width:0;"></div>
+                      </div>
+                      <div class="progress__left">
+                          <p><b>In progress</b></p>
+                      </div>
+                      <div class="progress__right">
+                        <p><b>531 ETH</b></p>
+                      </div>
+                    </div>
+                  </div>
+                <div class="main-screen__info block-shadow">
+                    <h2>ARGO</h2>
+                    <div class="info-txt">
+                        <p>ARGO is an entertaining space in augmented reality. Receive gifts, play, communicate in AR.</p>
+
+                    </div><a target="_blank" rel="noopener" onclick="ga('send', 'event', 'click', 'buy', 'buy top')" class="btn" href="https://argoreality.io/account">Buy tokens</a>
+                </div>
+                
+                    
+                    
+                    
+                    
+                
+
+                <div class="btns xs-visible"><a target="_blank" rel="noopener" onclick="ga('send', 'event', 'click', 'buy', 'buy top')" class="btn" href="https://argoreality.io/account">Buy tokens</a></div>
+            </div>
+        </section>
+        <section class="main-info container">
+            <canvas id="layer-coins"></canvas><p><b>Basic token price</b> during ICO — 0.000023 ETH.</p>  <p><b>Token price during Pre ICO</b> 0.000008-0.000016 depending on bonus applied.</p>  <p><b>Bonuses available during Pre ICO:</b></p>  <ul>  <li>50% on 1-2 days of sale;</li>  <li>40% on 3-4 days of sale;</li>  <li>30% on 5-6 days of sale;</li>  <li>20% on 6-8 days of sale.</li>  </ul>  <p>Pre ICO is deemed successful in case 33.2 mn. of tokens have been sold.</p>
+            <div class="xs-visible main-info__btn"><img src="/images/arrow-down.png" width="335" height="243">
+              <div class="btns">
+                <a target="_blank" rel="noopener" class="btn" onclick="ga('send', 'event', 'click', 'buy', 'buy top')" href="https://argoreality.io/account">Buy tokens</a>
+              </div>
+            </div>
+        </section>
+        <section class="what-we-do">
+            <div class="container row">
+                <div class="what-we-do__left"><h2 class="section-heading">Detailed product description</h2>  <p>For the generation Z online has become a customary habitat. Those businesses who can endow the physical world around with all the properties of the digital one will strategically win.</p>  <p>In July 2017 within the framework of this logic we launched to the market our minimum viable product Go2me.</p>  <p>It was a series of mobile quests using augmented reality. Players enjoyed a variety of tangible prizes - goods and coupons for popular brands. The MVP was done in partnership with one of the largest shopping centers in Minsk.</p></div>
+                <div class="what-we-do__right">
+                    <div class="video block-shadow">
+                        <iframe class="video-img" width="750" height="508" src="https://www.youtube.com/embed/0SIROHL23VI?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+                        <a target="_blank" onclick="ga('send', 'event', 'click', 'buy', 'buy top')" rel="noopener" class="btn" href="https://argoreality.io/account">Buy tokens</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="we-are">
+            <div class="container row row--nowrap">
+                <div class="we-are__left"><h2 class="section-heading">Basic usage scenario</h2><ol>  <li>The user enters the screen with a list of gifts. Tap on one of the gifts initiates the map mode;</li>  <li>On the map one sees a variety of sites with AR-games sites, quests, places of interactions of users;</li>  <li>A victory in a certain AR game brings user score points;</li>  <li>When required amount of points is obtained the "Collect prize" button and timer go on;</li>  <li>The delivery of gifts is carried out in the places specified by the rules. The QR code is scanned to confirm the transaction.</li></ol></div><img class="we-are__right" src="/images/phones_en-blur.png" alt="App screenshots">
+                <div class="dragon" id="dragon"><img src="/images/dragon-sm.png">
+                    <div class="flame"></div>
+                </div>
+            </div>
+        </section>
+        <section class="statistics container">
+            <h2 class="section-heading">During test run the MVP demonstrated excellent metrics</h2>
+            <div class="row mvp-info">
+                <div class="third mvp-info__item">
+                    <div class="mvp-info__number">47,3%</div>
+                    <div class="mvp-info__txt">is the user retention on the 30th day after installation. The world's average is about 20%</div>
+                </div>
+                <div class="third mvp-info__item">
+                    <div class="mvp-info__number">4,2</div>
+                    <div class="mvp-info__txt">is the MVP user rating in Google Play</div>
+                </div>
+                <div class="third mvp-info__item">
+                    <div class="mvp-info__number">8</div>
+                    <div class="mvp-info__txt">is a number of brands wishing to take part in the very first MVP run.</div>
+                </div>
+            </div>
+            <div class="btns"><a target="_blank" rel="noopener" class="btn" onclick="ga('send', 'event', 'click', 'buy', 'buy center')" href="https://argoreality.io/account">Buy tokens</a></div>
+        </section>
+        <section class="market container">
+            <h2 class="section-heading">Market for mobile application ARGO</h2>
+            <div class="row row--nowrap">
+                <div class="half"><p>Every year the average number of people interacting with augmented reality increases by 35%. Almost 2.5 billion people start and end their day on the smartphone screen.</p>    <p><b>The necessity of integration of AR into everyday routine is no more a subject of discussion. The question is who makes it first.</b></p><img src="/images/market1.png"></div>
+                <div class="half">
+                    <canvas id="layer-coins1"></canvas><img src="/images/arrow.png"><p>Capitalization is growing following the volume of the audience.</p>    <p>As early as 2017 AR provides growth of 186.5% compared to 2016. By 2021, experts predict an increase in revenues to 215 billion dollars.</p>    <p><b>The financial potential of the market for ARGO is huge. The distance from $ 11.4 to $ 215 billion will be overcome in just 4 years.</b></p>
+                </div>
+            </div>
+        </section>
+        <section class="distribution">
+            <div class="container">
+                <div class="argo"><img src="/images/argo.png" alt="Argo"><img class="logo-rotate" src="/images/footer-logo.png">
+                </div><img class="scheme" src="/images/scheme_en.svg" alt="System scheme">
+                <div class="distribution-txt">
+                    <h2 class="section-heading">Use of tokens</h2><p>All the user activities within ARGO are available only through usage of ARGO tokens.</p>
+                </div>
+            </div>
+        </section>
+        <section class="roadmap container">
+            <div class="roadmap-goals row row--nowrap">
+                <div class="half xs-full">
+                    <h2 class="section-heading">PRE-ICO</h2><p>For the moment the team’s main goal is to gather like-minded people among future users and use their feedback to define the vectors of ARGO construction.</p>    <p>The Pre ICO financial aim is to gather 531 ETH. </p>
+                </div>
+                <div class="half xs-full">
+                    <!-- <div class="stats">
+                        <div class="stats__item">
+                            <p>ETH raised</p>
+                            <p class="stats__value">0</p>
+                        </div>
+                        <div class="stats__item">
+                            <p>ETH soft cap</p>
+                            <p class="stats__value">531</p>
+                        </div>
+                    </div> -->
+                    
+                        
+                        
+                        
+                        
+                    
+                </div>
+            </div>
+            <h2 class="section-heading roadmap-h">Roadmap</h2>
+            <div class="path">
+                <div class="step step--1 step--done">
+                    <div class="step__number">1</div>
+                    <div class="step__info">
+                        <div class="step__date">02.2017</div>
+                        <p>Concept development</p>
+                    </div>
+                </div>
+                <div class="step step--2 step--done">
+                    <div class="step__number">2</div>
+                    <div class="step__info">
+                        <div class="step__date">05.2017</div>
+                        <p>Prototype development</p>
+                    </div>
+                </div>
+                <div class="step step--3 step--done">
+                    <div class="step__number">3</div>
+                    <div class="step__info">
+                        <div class="step__date">08.2017</div>
+                        <p>MVP test run</p>
+                    </div>
+                </div>
+                <div class="step step--4">
+                    <div class="step__number">4</div>
+                    <div class="step__info">
+                        <div class="step__date">03.2018</div>
+                        <p>Pre-ICO</p>
+                    </div>
+                </div>
+                <div class="step step--5">
+                    <div class="step__number">5</div>
+                    <div class="step__info">
+                        <div class="step__date">06.2018</div>
+                        <p>Soft launch in Minsk/Belarus</p>
+                    </div>
+                </div>
+                <div class="step step--6">
+                    <div class="step__number">6</div>
+                    <div class="step__info">
+                        <div class="step__date">12.2018</div>
+                        <p>Soft Launch in London/UK</p>
+                    </div>
+                </div>
+                <div class="step step--7">
+                    <div class="step__number">7</div>
+                    <div class="step__info">
+                        <div class="step__date">06.2019</div>
+                        <p>Full scale launch in London/UK</p>
+                    </div>
+                </div>
+                <div class="step step--8">
+                    <div class="step__number">8</div>
+                    <div class="step__info">
+                        <div class="step__date">06.2019</div>
+                        <p>Project scaling in major cities.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="roadmap-coins1"></div>
+            <div class="roadmap-coins2"></div>
+            <div class="btns btns--column">
+                <a target="_blank" onclick="ga('send', 'event', 'click', 'buy', 'buy bottom')" rel="noopener" class="btn" href="https://argoreality.io/account">Buy tokens</a>
+                <!-- <a target="_blank" rel="noopener" class="btn btn--secondary" href="#">Download</a> -->
+            </div>
+        </section>
+        <section class="faq container">
+            <h2 class="section-heading">Frequently asked questions</h2>
+            <div class="accordion" id="accordion2">
+                <div class="panel">
+                    <div class="panel__header block-shadow">1. What are ARGO tokens for?</div>
+                    <div class="panel__body">Possession of ARGO tokens entitles a user to participate in the creation and development of ARGO augmented reality layer.<br>      Using a specified number of ARGO tokens the user may join AR games, walk through special AR quests, place texts, photos, videos, stickers and 3D objects in AR.<br>      At the same time the user can earn new tokens with their activities:  likes, views, wins, prizes redeemed, other actions taken.<br>      Thus the ARGO token is the central resource for interactions within ARGO AR system.</div>
+                </div>
+                <div class="panel">
+                    <div class="panel__header block-shadow">2. How can one buy ARGO tokens?</div>
+                    <div class="panel__body"><ul>  <li>Tokens can be purchased for ETH during Pre ICO or ICO.</li>      <li>Tokens will be given to the most active users. Popularity, creativity, and activity rate will be taken into consideration.</li>      </ul></div>
+                </div>
+                <div class="panel">
+                    <div class="panel__header block-shadow">3. How can one download the app?</div>
+                    <div class="panel__body">Now the MVP application only is available on Google Play (Go2Me) and Appstore (Go2Me). It demonstrates starting interface and principle of work of prize menu. The AR activities are now restricted to the test geography only — Minsk/Belarus. Soon we begin test run in London/UK. Afterwards ARGO will be open in other cities.
+                        <p>
+                            <a target="_blank" rel="noopener" class="mvp-info__number" href="http://goo.gl/RYP9ff"><img src ="/images/mvp_android_download.png" alt=" Download from Google Play"></a>
+                            <a target="_blank" rel="noopener" class="mvp-info__number" href="http://goo.gl/AThGdk"><img src ="/images/mvp_apple_download.png" alt="Download from Apple store"></a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="team xs-visible">
+            <h2>Project leaders</h2>
+            <div class="swiper-container">
+              <div class="row row--justify container swiper-wrapper">
+                <div class="team-card block-shadow swiper-slide">
+                  <div class="photo-wrap">
+                    <div class="photo"><img src="/images/alexey.png" alt="Alexey"></div><a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/alexey-pushkarev-2252918/" target="_blank" rel="noopener" data-label="Alexey LinkedIn link"></a>
+                  </div>
+                  <div class="team-card__name">Alexey Pushkarev</div>
+                  <div class="team-card__txt">15-year experience as top manager, incl. 10 years top position with a large Eastern European packaging producer; MBA, University of New Brunswick, Canada; specialist in sustainable corporate development; experienced in managing marketing and sales.</div>
+                </div>
+                <div class="team-card block-shadow swiper-slide">
+                  <div class="photo-wrap">
+                    <div class="photo"><img src="/images/chrichton.png" alt="Crichton"></div><a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/crichton-brauer-39944341/" target="_blank" rel="noopener" data-label="Crichton LinkedIn link"></a>
+                  </div>
+                  <div class="team-card__name">Crichton Brauer</div>
+                  <div class="team-card__txt">Owner and investor over the past 15 years in businesses in both Russia and the UK. Additionally, provided business trainings to numerous international companies on growth and development. Further been working as a consultant for Sell2Me in the UK since 2016. Have followed closely crowd funding developments especially based around crypto currency.</div>
+                </div>
+                <div class="team-card block-shadow swiper-slide">
+                  <div class="photo-wrap">
+                    <div class="photo"><img src="/images/dmitry.png" alt="Dmitry"></div><a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/%D0%B4%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9-%D0%B5%D0%B7%D0%B5%D1%80%D1%81%D0%BA%D0%B8%D0%B9-44aab14b/" target="_blank" rel="noopener" data-label="Dmitry LinkedIn link"></a>
+                  </div>
+                  <div class="team-card__name">Dmitry Ezersky</div>
+                  <div class="team-card__txt">Expert in finance, venture capital and securities; investor and mentor for several IT and industrial projects; profound professional experience in banking business.</div>
+                </div>
+                <div class="team-card block-shadow swiper-slide">
+                  <div class="photo-wrap">
+                    <div class="photo"><img src="/images/vasily.png" alt="Vasily"></div><a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/veko-vasily-194a346/" target="_blank" rel="noopener" data-label="Vasily LinkedIn link"></a>
+                  </div>
+                  <div class="team-card__name">Vasily Veko</div>
+                  <div class="team-card__txt">Entrepreneur, visionary; Altwolf Software founder and managing partner; PhD Math, Belarusian State University; 18+ years experience in innovative development of mass-multiserver, 3D, AR | VR cross-industry products; creator of C.H.A.O.S. helicopter simulator (more than 30 mn. downloads worldwide).</div>
+                </div>
+                <div class="team-card block-shadow swiper-slide">
+                  <div class="photo-wrap">
+                    <div class="photo"><img src="/images/team/yamaguchi.jpg" alt="Hidefumi Yamaguchi"></div>
+                      <a target="_blank" rel="noopener" class="facebook" href="https://www.facebook.com/hidefrumi.yamaguchi" ></a>
+                  </div>
+                  <div class="team-card__name">Hidefumi Yamaguchi</div>
+                  <div class="team-card__txt">Director of international project of "Kaisin" company in Kumamoto, Kyushu. Former Director of the Medical Foundation "Help to Chernobyl", Kyushu. Professional consultant in business relations between Japan and the Republic of Belarus. Interpreter. For over 10 years have been assisting the Embassy of Belarus in Japan. Director of the Jukendo Federation in Oita Prefecture. Attested for: Tankendo - 8 dan, Jukendo - 7 dan, and Kendo - 5 dan. Member of the international education project of Zen Buddhism in Belarus.</div>
+                </div>
+                <div class="team-card block-shadow swiper-slide">
+                  <div class="photo-wrap">
+                    <div class="photo"><img src="/images/team/lavrinovich.jpg" alt="Aliaksandr Laurynovich"></div>
+                  </div>
+                  <div class="team-card__name">Aliaksandr Laurynovich</div>
+                  <div class="team-card__txt">Lead Android Developer – ARGO Project.<br>Full stack Android and back-end developer with over 15 years of experience in Software development. With Java as main development platform created server-side web and mobile applications for business customers. Proficient at 3D modelling and software development with Unity, Unreal Engine, Vuforia,
+        Wikitude and other modern platforms.</div>
+                </div>
+                <div class="team-card block-shadow swiper-slide">
+                  <div class="photo-wrap">
+                    <div class="photo"><img src="/images/team/soloviev.jpg" alt="Artsiom Salauyou"></div>
+                    <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/artsiom-salauyou-9973b955/" ></a>
+                  </div>
+                  <div class="team-card__name">Artsiom Salauyou</div>
+                  <div class="team-card__txt">Lead iOS Developer – ARGO Project. An experienced mobile software developer with significant design, support, administration and implementation experience of iOS and multiplatform projects. Over 12 years of IT experience with full life cycle project experience, particularly in the client-server and multimedia applications. Started working with Augmented Reality projects in 2012 using different hardware and software.</div>
+                </div>
+                <div class="team-card block-shadow swiper-slide">
+                  <div class="photo-wrap">
+                    <div class="photo"><img src="/images/team/zharnovskaya.jpg" alt="Nastassia Zharnouskaya"></div>
+                    <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/nastassia-zharnouskaya-548a5482/" ></a>
+                  </div>
+                  <div class="team-card__name">Nastassia Zharnouskaya</div>
+                  <div class="team-card__txt">Lead UX/UI designer / grafic designer – ARGO Project. Responsible for UI &amp; UX for mobile applications on Android and iOS, as well as Web applications and sites. Has a profound knowledge of Adobe products and tools. Experienced in conceptualization of product features, streamline design, asset generation for the iOS &amp; Android apps, as well as marketing collateral, including ads, print, etc. Strong visual design skills and modern pattern knowledge. </div>
+                </div>
+                <div class="team-card block-shadow swiper-slide">
+                  <div class="photo-wrap">
+                    <div class="photo"><img src="/images/team/hisham.jpg" alt="Hisham Al Otaibi"></div>
+                    <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/hishammba/" ></a>
+                  </div>
+                  <div class="team-card__name">Hisham Al Otaibi</div>
+                  <div class="team-card__txt">Over 18 years of strong experience in U.A.E., Saudi Arabia, Oman, Kuwait, and also Canada and U.S.A. Contributed to various projects involving building market presence and starting up new companies. Has broad knowledge and hands on experience in bid preparation, venture planning, financial analysis, financial modeling, and investment evaluation.</div>
+                </div>
+                <div class="team-card block-shadow swiper-slide">
+                  <div class="photo-wrap">
+                    <div class="photo"><img src="/images/team/tishin.jpg" alt="Igor Tishin"></div>
+                      <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/igor-tishin-32bb45a/" ></a>
+                  </div>
+                  <div class="team-card__name">Igor Tishin</div>
+                  <div class="team-card__txt">The permanent head of EagleDynamics, what for 20 years leads the company from success to success. Launched in 1995 with the Flanker project, the company created many flying simulators such as LockOn, DCS. He is not afraid to look at something new and study it. <br>Candidate of Physical Sciences. A constant study of something new. His life credo is learning.</div>
+                </div>
+                <div class="team-card block-shadow swiper-slide">
+                  <div class="photo-wrap">
+                    <div class="photo"><img src="/images/team/mattias.jpg" alt="Matthias Techmanski"></div>
+                      <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/matthias-techmanski-18b55847/" ></a>
+                  </div>
+                  <div class="team-card__name">Matthias Techmanski</div>
+                  <div class="team-card__txt">A young ambitious entrepreneur, a tireless marketer who is looking for both like-minded people and the most convenient way to communicate and offer his services to people</div>
+                </div>
+                <div class="team-card block-shadow swiper-slide">
+                  <div class="photo-wrap">
+                    <div class="photo"><img src="/images/team/mashchenski.jpg" alt="Vladimir Mashchenski"></div>
+                      <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/vladimir-mashchenski-4795a04/" ></a>
+                  </div>
+                  <div class="team-card__name">Vladimir Mashchenski</div>
+                  <div class="team-card__txt">Talented developer<br> Ideological inspiration and creative entrepreneur in work and leisure. Master Qigong. To work hard you need to rest well. And to have a good rest you need a lot of health.</div>
+                </div>
+                <div class="team-card block-shadow swiper-slide">
+                  <div class="photo-wrap">
+                    <div class="photo"><img src="/images/team/irina.jpg" alt="Irina Peredriy"></div>
+                      <a target="_blank" rel="noopener" class="facebook" href="https://www.facebook.com/irina.peredriy" ></a>
+                  </div>
+                  <div class="team-card__name">Irina Peredriy</div>
+                  <div class="team-card__txt">Marketing Lead<br>
+        Responsible for ARGO online marketing and PR. 8 years of marketing experience and journalism. She has launched more than 100 online projects, both e-commerce and service. Strongly believe that team, creativity and soft skills are as important as hard skills.</div>
+                </div>
+            </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </section>
+          <section class="team xs-hidden">
+            <h2>Project leaders</h2>
+             <div class="container swiper-container" id="team-slider1">
+                <div class="swiper-wrapper">
+              <div class="team-card block-shadow">
+                <div class="photo-wrap">
+                  <div class="photo"><img src="/images/alexey.png" alt="Alexey"></div><a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/alexey-pushkarev-2252918/" target="_blank" rel="noopener"  data-label="Alexey LinkedIn link"></a>
+                </div>
+                <div class="team-card__name">Alexey Pushkarev</div>
+                <div class="team-card__txt">15-year experience as top manager, incl. 10 years top position with a large Eastern European packaging producer; MBA, University of New Brunswick, Canada; specialist in sustainable corporate development; experienced in managing marketing and sales.</div>
+                <div class="team-card__more" id="btn-alexey"></div>
+              </div>
+              <div class="team-card block-shadow">
+                <div class="photo-wrap">
+                  <div class="photo"><img src="/images/chrichton.png" alt="Crichton"></div><a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/crichton-brauer-39944341/" target="_blank" rel="noopener"  data-label="Crichton LinkedIn link"></a>
+                </div>
+                <div class="team-card__name">Crichton Brauer</div>
+                <div class="team-card__txt">Owner and investor over the past 15 years in businesses in both Russia and the UK. Additionally, provided business trainings to numerous international companies on growth and development. Further been working as a consultant for Sell2Me in the UK since 2016. Have followed closely crowd funding developments especially based around crypto currency.</div>
+                <div class="team-card__more" id="btn-crichton"></div>
+              </div>
+              <div class="team-card block-shadow">
+                <div class="photo-wrap">
+                  <div class="photo"><img src="/images/dmitry.png" alt="Dmitry"></div><a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/%D0%B4%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9-%D0%B5%D0%B7%D0%B5%D1%80%D1%81%D0%BA%D0%B8%D0%B9-44aab14b/" data-label="Dmitry LinkedIn link" target="_blank" rel="noopener"></a>
+                </div>
+                <div class="team-card__name">Dmitry Ezersky</div>
+                <div class="team-card__txt">Expert in finance, venture capital and securities; investor and mentor for several IT and industrial projects; profound professional experience in banking business.</div>
+                <div class="team-card__more" id="btn-dmitry"></div>
+              </div>
+              <div class="team-card block-shadow">
+                <div class="photo-wrap">
+                  <div class="photo"><img src="/images/vasily2.png" alt="Vasily"></div><a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/veko-vasily-194a346/" data-label="Vasily LinkedIn link" target="_blank" rel="noopener"></a>
+                </div>
+                <div class="team-card__name">Vasily Veko</div>
+                <div class="team-card__txt">Entrepreneur, visionary; Altwolf Software founder and managing partner; PhD Math, Belarusian State University; 18+ years experience in innovative development of mass-multiserver, 3D, AR | VR cross-industry products; creator of C.H.A.O.S. helicopter simulator (more than 30 mn. downloads worldwide).</div>
+                <div class="team-card__more" id="btn-vasily"></div>
+              </div>
+              <div class="team-card block-shadow">
+                  <div class="photo-wrap">
+                    <div class="photo"><img src="/images/team/yamaguchi.jpg" alt="Hidefumi Yamaguchi"></div>
+                      <a target="_blank" rel="noopener" class="facebook" href="https://www.facebook.com/hidefrumi.yamaguchi" ></a>
+                  </div>
+                  <div class="team-card__name">Hidefumi Yamaguchi</div>
+                  <div class="team-card__txt">Director of international project of "Kaisin" company in Kumamoto, Kyushu. Former Director of the Medical Foundation "Help to Chernobyl", Kyushu. Professional consultant in business relations between Japan and the Republic of Belarus. Interpreter. For over 10 years have been assisting the Embassy of Belarus in Japan. Director of the Jukendo Federation in Oita Prefecture. Attested for: Tankendo - 8 dan, Jukendo - 7 dan, and Kendo - 5 dan. Member of the international education project of Zen Buddhism in Belarus.</div>
+                <div class="team-card__more" id="btn-yamaguchi"></div>
+                </div>
+                <div class="team-card block-shadow">
+                  <div class="photo-wrap">
+                    <div class="photo"><img src="/images/team/lavrinovich.jpg" alt="Aliaksandr Laurynovich"></div>
+                  </div>
+                  <div class="team-card__name">Aliaksandr Laurynovich</div>
+                  <div class="team-card__txt">Lead Android Developer – ARGO Project.<br>Full stack Android and back-end developer with over 15 years of experience in Software development. With Java as main development platform created server-side web and mobile applications for business customers. Proficient at 3D modelling and software development with Unity, Unreal Engine, Vuforia,
+        Wikitude and other modern platforms.</div>
+                </div>
+                <div class="team-card block-shadow">
+                  <div class="photo-wrap">
+                    <div class="photo"><img src="/images/team/soloviev.jpg" alt="Artsiom Salauyou"></div>
+                    <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/artsiom-salauyou-9973b955/" ></a>
+                  </div>
+                  <div class="team-card__name">Artsiom Salauyou</div>
+                  <div class="team-card__txt">Lead iOS Developer – ARGO Project. An experienced mobile software developer with significant design, support, administration and implementation experience of iOS and multiplatform projects. Over 12 years of IT experience with full life cycle project experience, particularly in the client-server and multimedia applications. Started working with Augmented Reality projects in 2012 using different hardware and software.</div>
+                </div>
+                <div class="team-card block-shadow">
+                  <div class="photo-wrap">
+                    <div class="photo"><img src="/images/team/zharnovskaya.jpg" alt="Nastassia Zharnouskaya"></div>
+                    <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/nastassia-zharnouskaya-548a5482/" ></a>
+                  </div>
+                  <div class="team-card__name">Nastassia Zharnouskaya</div>
+                  <div class="team-card__txt">Lead UX/UI designer / grafic designer – ARGO Project. Responsible for UI &amp; UX for mobile applications on Android and iOS, as well as Web applications and sites. Has a profound knowledge of Adobe products and tools. Experienced in conceptualization of product features, streamline design, asset generation for the iOS &amp; Android apps, as well as marketing collateral, including ads, print, etc. Strong visual design skills and modern pattern knowledge. </div>
+                </div>
+                <div class="team-card block-shadow">
+                  <div class="photo-wrap">
+                    <div class="photo"><img src="/images/team/hisham.jpg" alt="Hisham Al Otaibi"></div>
+                    <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/hishammba/" ></a>
+                  </div>
+                  <div class="team-card__name">Hisham Al Otaibi</div>
+                  <div class="team-card__txt">Over 18 years of strong experience in U.A.E., Saudi Arabia, Oman, Kuwait, and also Canada and U.S.A. Contributed to various projects involving building market presence and startпше ing up new companies. Has broad knowledge and hands on experience in bid preparation, venture planning, financial analysis, financial modeling, and investment evaluation.</div>
+                </div>
+                <div class="team-card block-shadow">
+                  <div class="photo-wrap">
+                    <div class="photo"><img src="/images/team/tishin.jpg" alt="Igor Tishin"></div>
+                      <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/igor-tishin-32bb45a/" ></a>
+                  </div>
+                  <div class="team-card__name">Igor Tishin</div>
+                  <div class="team-card__txt">The permanent head of EagleDynamics, what for 20 years leads the company from success to success. Launched in 1995 with the Flanker project, the company created many flying simulators such as LockOn, DCS. He is not afraid to look at something new and study it. <br>Candidate of Physical Sciences. A constant study of something new. His life credo is learning.</div>
+                </div>
+                <div class="team-card block-shadow">
+                  <div class="photo-wrap">
+                    <div class="photo"><img src="/images/team/mattias.jpg" alt="Matthias Techmanski"></div>
+                      <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/matthias-techmanski-18b55847/" ></a>
+                  </div>
+                  <div class="team-card__name">Matthias Techmanski</div>
+                  <div class="team-card__txt">A young ambitious entrepreneur, a tireless marketer who is looking for both like-minded people and the most convenient way to communicate and offer his services to people</div>
+                </div>
+                <div class="team-card block-shadow">
+                  <div class="photo-wrap">
+                    <div class="photo"><img src="/images/team/mashchenski.jpg" alt="Vladimir Mashchenski"></div>
+                      <a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/vladimir-mashchenski-4795a04/" ></a>
+                  </div>
+                  <div class="team-card__name">Vladimir Mashchenski</div>
+                  <div class="team-card__txt">Talented developer<br> Ideological inspiration and creative entrepreneur in work and leisure. Master Qigong. To work hard you need to rest well. And to have a good rest you need a lot of health.</div>
+                </div>
+                <div class="team-card block-shadow">
+                  <div class="photo-wrap">
+                    <div class="photo"><img src="/images/team/irina.jpg" alt="Irina Peredriy"></div>
+                      <a target="_blank" rel="noopener" class="facebook" href="https://www.facebook.com/irina.peredriy" ></a>
+                  </div>
+                  <div class="team-card__name">Irina Peredriy</div>
+                  <div class="team-card__txt">Marketing Lead<br>
+        Responsible for ARGO online marketing and PR. 8 years of marketing experience and journalism. She has launched more than 100 online projects, both e-commerce and service. Strongly believe that team, creativity and soft skills are as important as hard skills.</div>
+                </div>
+            </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </section>
+          <section class="experience container">
+              <h2>Experience and partners</h2>
+              <div class="row row--justify">
+                <div class="exp-item" id="info-microsoft"><img src="/images/microsoft.png" alt="Microsoft"></div>
+                <div class="exp-item" id="info-intel"><img src="/images/intel.png" alt="Intel"></div>
+                <div class="exp-item" id="info-pirates"><img src="/images/pirates.png" alt="Pirates"></div>
+                <div class="exp-item" id="info-chaos"><img src="/images/chaos.png" alt="Chaos"></div>
+                <div class="exp-item" id="info-dcs"><img src="/images/dcs.png" alt="DCS"></div>
+              </div>
+            </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="btns cta">
+                    <a target="_blank" rel="noopener" class="btn" onclick="ga('send', 'event', 'click', 'buy', 'buy top')" href="https://argoreality.io/account">Buy tokens</a>
+                     <a target="_blank" rel="noopener" class="btn btn--secondary" id="sub" href="#"  onclick="ga('send', 'event', 'click', 'subscribeeng', 'subscribe')">Subscribe</a>
+                </div>
+                <div class="social social--footer">
+                    <a target="_blank" rel="noopener" class="soc soc--fb" href="https://www.facebook.com/Argo-751423075065305/" title="Facebook link" target="_blank" rel="noopener" ></a>
+                    <a target="_blank" rel="noopener" class="soc soc--twi" href="https://twitter.com/argoproject_io" title="Twitter link" target="_blank" rel="noopener" ></a>
+                    <a target="_blank" rel="noopener" class="soc soc--btc" href="https://bitcointalk.org/index.php?topic=2955182" title="BitcoinTalk link" target="_blank" rel="noopener" ></a>
+                    <a target="_blank" rel="noopener" class="soc soc--tg" href="https://t.me/joinchat/H48HbRBuUFqgFR-sEcY8mQ" title="Telegram link" target="_blank" rel="noopener" ></a>
+                    <a target="_blank" rel="noopener" class="soc soc--github" href="https://github.com/VasiliAlt/ARGO" target="_blank" rel="noopener" title="Github link"></a>
+                    <!--a.soc.soc--github(href="#", title="Github link")-->
+                    <a target="_blank" rel="noopener" class="soc soc--medium" href="https://medium.com/@argoproject" title="Medium link" target="_blank" rel="noopener" ></a>
+                    <a target="_blank" rel="noopener" class="soc soc--linkedin" href="https://www.linkedin.com/company/argoproject-io/" title="LinkedIn link" target="_blank" rel="noopener" ></a>
+                    <!--a.soc.soc--reddit(href="#", title="Reddit link")-->
+                </div>
+                <nav class="main-nav main-nav--footer"><span>ARGO</span>
+                    <ul>
+                       <!-- <li><a target="_blank" rel="noopener" href="#">Tutorial</a></li>
+                        <li><a target="_blank" rel="noopener" href="#">Bounty</a></li> -->
+                        <li><a target="_blank" rel="noopener"  onclick="ga('send', 'event', 'click', 'whitepapereng', 'Footer')" href="https://argoreality.io/pdf/wp_Argo_en.pdf" target="_blank" rel="noopener">Whitepaper</a></li>
+                        <li><a target="_blank" rel="noopener" class="pp-footer" href="pdf/privacy_policy.pdf" >Privacy Policy</a></li>
+                    </ul>
+                    <a class="icocra" href="http://icocra.com/" title="ICOcra.com"><img src="/images/icocra.png" alt="ICOcra.com" height="60"></a>
+                </nav>
+
+            </div>
+            <div class="footer-img"><img class="footer-bg" src="/images/footer-bg.png"><img class="footer-logo" src="/images/footer-logo.png"><img class="footer-hand" src="/images/footer-hand_only.png"></div>
+        </footer>
+    </div>
+    <div class="modal" id="modal-alexey">
+        <div class="modal-window block-shadow team-card team-card--modal modal-window--center">
+            <button class="close"></button>
+            <div class="photo-wrap">
+                <div class="photo"><img src="/images/alexey.png" alt="Alexey"></div><a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/alexey-pushkarev-2252918/" target="_blank" rel="noopener"  data-label="Alexey LinkedIn link"></a>
+            </div>
+            <div class="team-card__txt">A.P.: “The ARGO concept is targeted for Gen-Z – people who will soon become the mainstay of the modern society and major customers of many brands. Businesses understand the trend. So, they are interested in our work and ready to join the ecosystem in order to build relations with Gen-Z community at a new technological level. My mission with ARGO is to harmonize both integral parts of the project – marketing and engineering.”</div>
+        </div>
+    </div>
+    <div class="modal" id="modal-crichton">
+        <div class="modal-window block-shadow team-card team-card--modal modal-window--center">
+            <button class="close"></button>
+            <div class="photo-wrap">
+                <div class="photo"><img src="/images/chrichton.png" alt="Crichton"></div><a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/crichton-brauer-39944341/" target="_blank" rel="noopener"  data-label="Crichton LinkedIn link"></a>
+            </div>
+            <div class="team-card__txt">C.B.: “Excited to be the UK rep for ARGO, running the London office and working on the local customer base.”</div>
+        </div>
+    </div>
+    <div class="modal" id="modal-dmitry">
+        <div class="modal-window block-shadow team-card team-card--modal modal-window--center">
+            <button class="close"></button>
+            <div class="photo-wrap">
+                <div class="photo"><img src="/images/dmitry.png" alt="Dmitry"></div><a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/%D0%B4%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9-%D0%B5%D0%B7%D0%B5%D1%80%D1%81%D0%BA%D0%B8%D0%B9-44aab14b/" target="_blank" rel="noopener"  data-label="Dmitry LinkedIn link"></a>
+            </div>
+            <div class="team-card__txt">D.E.: “The growth rates assessed by analysts for the augmented reality industry exceed tenfold the similar indicators in other industries. In this respect, the ARGO project became a magnetic challenge for me as a financier. My function in this project relates to the allocation of financial resources at all project stages and milestone budgeting.”</div>
+        </div>
+    </div>
+    <div class="modal" id="modal-vasily">
+        <div class="modal-window block-shadow team-card team-card--modal modal-window--center">
+            <button class="close"></button>
+            <div class="photo-wrap">
+                <div class="photo"><img src="/images/vasily.png" alt="Vasily"></div><a target="_blank" rel="noopener" class="linkedin" href="https://www.linkedin.com/in/veko-vasily-194a346/" target="_blank" rel="noopener"  data-label="Vasily LinkedIn link"></a>
+            </div>
+            <div class="team-card__txt">D.E.: “The growth rates assessed by analysts for the augmented reality industry exceed tenfold the similar indicators in other industries. In this respect, the ARGO project became a magnetic challenge for me as a financier. My function in this project relates to the allocation of financial resources at all project stages and milestone budgeting.”</div>
+        </div>
+    </div>
+    <div class="modal" id="modal-yamaguchi">
+        <div class="modal-window block-shadow team-card team-card--modal modal-window--center">
+          <button class="close"></button>
+          <div class="photo-wrap">
+            <div class="photo"><img src="/images/yamaguchi.jpg" alt="Hidefumi Yamaguchi"></div><a class="facebook" href="https://www.facebook.com/hidefrumi.yamaguchi" data-label="Hidefumi Yamaguchi link"></a>
+          </div>
+          <div class="team-card__txt">Hidefumi: "Today, many unique and promising projects such as ARGO come from the IT countries in Eastern Europe. Thanks to information technologies we can implement joint Belarusian-Japanese projects remotely. I see the prospect for ARGO in the Japanese market and will be engaged in its promotion here. The most important thing is that this project has a legal support in the form of an official decree of the head of state - the President of the Republic of Belarus, who highly estimates the potential of the new digital economy."</div>
+        </div>
+      </div>
+    <div class="modal" id="modal-microsoft">
+        <div class="modal-window modal-window--sm modal-window--center block-shadow">
+          <button class="close"></button>
+          <div class="photo-wrap" style="text-align:center;"><img src="/images/microsoft.png" alt="Microsoft"></div>
+          <div class="team-card__txt">We are a certified partner of Microsoft.</div>
+        </div>
+      </div>
+      <div class="modal" id="modal-intel">
+        <div class="modal-window modal-window--sm modal-window--center block-shadow">
+          <button class="close"></button>
+          <div class="photo-wrap" style="text-align:center;"><img src="/images/intel.png" alt="Intel"></div>
+          <div class="team-card__txt">We are on developer early access list for Vaunt AR glasses by Intel.</div>
+        </div>
+      </div>
+      <div class="modal" id="modal-pirates">
+        <div class="modal-window modal-window--sm modal-window--center block-shadow">
+          <button class="close"></button>
+          <h2>Pirates: Wind of CHAOS – mobile game</h2>
+          <div class="team-card__txt">In 2016 we have developed its game engine and dozens of 3D models.</div>
+        </div>
+      </div>
+      <div class="modal" id="modal-chaos">
+        <div class="modal-window modal-window--sm modal-window--center block-shadow">
+          <button class="close"></button>
+          <h2>Helicopter simulator CHAOS (iOS, Android).</h2>
+          <div class="team-card__txt">30,000,000 downloads globally has a helicopter simulator CHAOS (iOS, Android). In 2015 we have developed its game engine and dozens of 3D models.</div>
+        </div>
+      </div>
+      <div class="modal" id="modal-dcs">
+        <div class="modal-window modal-window--sm modal-window--center block-shadow">
+          <button class="close"></button>
+          <h2>Digital Combat Simulator (DCS)</h2>
+          <div class="team-card__txt">A model simulator of battle aviation and is our early client.</div>
+        </div>
+      </div>
+    <div class="modal" id="modal-subscribe">
+    <div class="modal-window modal-window--sm modal-window--center block-shadow">
+        <button class="close"></button>
+        <div class="login-block">
+            <form class="login-form" id="subscribe-success-form" style="display: none">
+                <h2>Almost finished...</h2>
+                <p>We need to confirm your email address. To complete the subscription process, please click the link in the email we just sent you.</p>
+            </form>
+            <form class="login-form subscribe-form" id="subscribe-form">
+                <h2>Subscribe to our newsletter</h2>
+                <p>Leave your email and receive the latest news, our special offers and discounts!</p>
+                <label class="visuallyhidden" for="sub-email">Enter e-mail</label>
+                <input type="email" name="sub-email" id="sub-email" placeholder="e-mail" required>
+                <div class="g-recaptcha" data-sitekey="6Ld8WUkUAAAAAHFrFVkbpzQiS-lOF-qcFzKLG_jw"></div>
+                <button type="submit" class="btn"  onclick="ga('send', 'event', 'click', 'subscribe', 'emailSubscribe')">Subscribe</button>
+            </form>
+        </div>
+    </div>
+</div>    <div class="container phone-wrapper">
+        <div id="phone">
+            <div class="underlay" id="phoneScreen"></div><img src="https://argoreality.io/images/phone.png">
+        </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/js/swiper.min.js"></script>
+<script src="https://argoreality.io/js/script.js"></script>
+    <script src="https://argoreality.io/js/index.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+</body>
+</html>
